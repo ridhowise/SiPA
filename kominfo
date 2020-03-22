@@ -1,0 +1,42 @@
+PROXMOX SERVER
+https://192.168.10.99:8006/ 
+root
+Mitrakab.
+
+SPPD PROD
+https://192.168.10.6/ 
+
+BARJAS
+https://192.168.10.9/ 
+
+SPPD dev
+https://192.168.10.10/ 
+
+E-SIGN
+https://192.168.10.11/ 
+
+ITUE
+https://192.168.10.251/ 
+
+QNAP
+https://192.168.10.100:8080/ 
+admin
+Sirius221b#$;
+
+Exp E-Sign
+https://192.168.10.12
+
+==========================================
+
+HOST SISKEUDES
+https://192.168.10.102: 
+
+VM SISKEUDES
+https://192.168.10.103
+
+sipa
+192.168.10.15
+password root
+sirius221#$;
+password user
+sipa221#$;
