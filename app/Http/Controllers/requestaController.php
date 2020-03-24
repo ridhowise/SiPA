@@ -86,10 +86,10 @@ public function getDelete($id)
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
 
-public function cari(Request $request)
+public function cari(Request $requesta)
     {
         // menangkap data pencarian
-        $cari = $request->cari;
+        $cari = $requesta->cari;
  
             // mengambil data dari table pegawai sesuai pencarian data        
         $bio = DB::table('request')
