@@ -101,7 +101,7 @@
             </ul> --}}
         </li>
         <li >
-            <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Request Aplikasi</a>
+            <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Pengajuan Aplikasi</a>
         </li>
         <li class="active" >
           <a href="/admin"><i class="fa fa-building" style="font-size:24px;color:white;opacity:0.5;"></i> SKPD</a>
