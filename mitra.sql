@@ -80,7 +80,7 @@ INSERT INTO `request` (`id`, `nama`, `namaaps`, `penjelasan`, `lampiran`, `statu
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jabatan` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `foto` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `jabatan`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
+INSERT INTO `users` (`id`, `name`, `username`, `password`, `jabatan`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
 (27, 'ridho', 'ridho', '$2y$10$6QkF79pxJGYPtp8PhklZm.ynvv0jrA1eMr9dLP7KooF4petmxseXG', 'admin', 'ridho.jpg', 'Tc4aovjjaw5sZCm9WkhuUCROWKxQkNhnRjrFARWXrtr5o6byHWEkpCBKyDDW', NULL, '2020-02-25 06:39:45'),
 (28, 'Dinas Ketahanan Pangan', 'ketapang', '$2y$10$s/c4ez1s0eRrWgohNqUO/umD1LCFobDxyEyd1w2ec3QQ0ZqHT2et.', 'user', '10999668_325273277643100_7431738826563418399_o.jpg', 'Y2lIOGFZpvPiPZdaYzMA0iO3xJsRDa3IYNfqqZW3ANG34z89yfOc542ej24x', NULL, '2020-02-25 17:38:06'),
 (29, 'Badan Penanggulangan Bencana Daerah', 'BPBD', '$2y$10$UrlO00FPXYISD689vZNax.qoc8mfc7OWrJnocLO4ORCpC7nen9aM6', 'user', '45313728_868316790223666_2131786405821546496_n.jpg', '7Zt21JDuDBEqy5rceVbT5GYY7kcbAvtab3HMuGyC8eJi0tQ3FqiYLHZuOp6n', NULL, NULL),

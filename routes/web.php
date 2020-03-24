@@ -59,9 +59,16 @@ Route::get('/dashboard', 'dashboardController@dashboard')->name('admin')->middle
   Route::post('/inputrequest', 'requestController@simpanrequest');
   Route::get('/editrequest/{id}', 'requestController@getEdit');
   Route::post('/editrequest/{id}', 'requestController@ubahrequest');
+  Route::get('/editprogress/{id}', 'requestController@getEditt');
+  Route::post('/ediprogress/{id}', 'requestController@ubahrequirement');
+
   Route::get('/hapusrequest/{id}', 'requestController@getDelete');
 
+  Route::get('/progress', 'progressController@progress');
+
+
   Route::get('/requesta', 'requestaController@requesta')->name('admin')->middleware('adminchecker');
+  Route::get('/requesta','requestaController@cari');
   Route::get('/inputrequesta', 'requestaController@getInput');
   Route::post('/inputrequesta', 'requestaController@simpanrequest');
   Route::get('/editrequesta/{id}', 'requestaController@getEdit');

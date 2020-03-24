@@ -59,7 +59,7 @@ public function simpanpassword(Request $request)
             $bio = new AdminModel;
             $bio->name = $request->input('name');
             $bio->jabatan = $request->input('jabatan');
-            $bio->email = $request->input('email');
+            $bio->username = $request->input('username');
             $bio->password = bcrypt ($request->input('password'));
             $bio->foto = $fileName;
 

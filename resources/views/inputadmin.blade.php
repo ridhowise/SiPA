@@ -19,7 +19,7 @@
                 <div class="form-group">
                   <label class="control-label col-sm-2">Username:</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="email" >
+                    <input type="text" class="form-control" name="username" >
                   </div>
                 </div>
                 <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use App\Http\Models\requestModel;
+use App\Http\Models\requirementModel;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class requestController extends BaseController
     public function request()
     {
         $name = Auth::user()->name;
-        $bio = requestModel::where('nama', $name)->paginate(5);
+        $bio = requestModel::with("requirements")->where('nama', $name)->paginate(5);
+        $reqq = requirementModel::get();
         // $bio = requestModel::get();
         return view('request', ['bio' => $bio]);
     }
@@ -47,7 +49,16 @@ public function simpanrequest(Request $request)
 
  
             $bio->save();
-             
+
+            $syarats = $request->input('syarat');
+            foreach($syarats as $syarat) {
+                $reqq = new requirementModel();
+                $reqq->syarat = $syarat;
+                $reqq->checkbox = false;
+                $reqq->request_id = $bio->id;
+                $reqq->save();
+            }
+
             return redirect()->action('requestController@request')->with('style', 'success')->with('alert', 'Berhasil Disimpan ! ')->with('msg', 'Menunggu persetujuan');
         
         }
@@ -57,12 +68,11 @@ public function simpanrequest(Request $request)
 
 public function getEdit($id)
 {
-    return view('editrequest', ['request' => requestModel::findOrFail($id)]);
+    return view('editrequest', ['request' => requestModel::with("requirements")->findOrFail($id)]);
 }
  
 public function ubahrequest(Request $request)
 {
-    $bio     = new requestModel;
     $id     = $request->input('id');
     $bio     = requestModel::find($id);
      
@@ -76,6 +86,21 @@ public function ubahrequest(Request $request)
 
 
     $bio->save();
+     
+
+       $checkboxs = $request->input('checkbox');
+        $ids = $request->input('ids');
+            foreach($ids as $key => $requirement_id) {
+                $check_box = false;
+                if(isset($checkboxs[$key]) === true) {
+                    $check_box = true;
+                } else {
+                    $check_box = false;
+                }
+                $reqq     = requirementModel::find($requirement_id);
+                $reqq->checkbox = $check_box;
+                $reqq->save();
+            }
      
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }

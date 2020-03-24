@@ -1,11 +1,12 @@
 <?php
  
 namespace App\Http\Controllers;
- 
+
 use App\Http\Models\requestaModel;
+use App\Http\Models\requirementModel;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Requesta;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use DB;
@@ -15,6 +16,8 @@ class requestaController extends BaseController
     public function requesta()
     {
         $bio = requestaModel::paginate(5);
+        $reqq = requirementModel::get();
+
         // $bio = requestModel::get();
         return view('requesta', ['bio' => $bio]);
     }
@@ -83,29 +86,27 @@ public function getDelete($id)
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
 
-
-public function downfunc(){
-    	$bio=DB::table('requasta')->get();
-    	return view('requesta',compact('downloads'));
-    }
-    public function cari(Requesta $requasta)
+public function cari(Request $request)
     {
         // menangkap data pencarian
-        $cari = $requasta->cari;
-     
-         // mengambil data dari table pegawai sesuai pencarian data
-        $bio = DB::table('requasta')
-        ->where('nama','like',"%".$cari."%")
-        ->paginate();
-     
+        $cari = $request->cari;
+ 
+            // mengambil data dari table pegawai sesuai pencarian data        
+        $bio = DB::table('request')
+        ->where('nama','LIKE',"%{$cari}%")
+        ->orWhere('namaaps', 'LIKE', "%{$cari}%") 
+        ->paginate(5);
+ 
             // mengirim data pegawai ke view index
-        return view('requasta',['bio' => $bio]);
-     
+        return view('requesta',['bio' => $bio]);
+ 
     }
 
+public function downfunc(){
+    	$bio=DB::table('request')->get();
+    	return view('requesta',compact('downloads'));
+    }
     
-    
-
 
 }
 

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Request Aplikasi</title>
+  <title>Progress</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -98,10 +99,11 @@
                 </li> -->
             </ul> --}}
         </li>
-        <li class="active" >
+        <li class="" >
             <a href="/request"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Status Aplikasi</a>
         </li>
-          
+             
+
               
 
 
@@ -131,92 +133,72 @@
         <strong>{{Session::get('alert')}}</strong>{{Session::get('msg')}}
     </div>
     @endif
-    <div class="panel panel-default">
-        <div class="panel-heading">List Data &nbsp;
-        <a href="inputrequest" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
-        </div>
-        <div class="panel-body">
+    
         <div class="row">
            <div class="col-md-12">
             <div class="container-fluid">
-         
-              <div class="table-responsive">
-              <table class="table table-striped table-bordered table-hover">
 
-                <thead>
-                  <tr>
-                    <!-- {{-- <th>Nama SKPD</th> --}} -->
-                    <th>Nama Aplikasi</th>
-                    <th>Status</th>
-                    <!-- <th>Penjelasan</th>
-                    <th>Lampiran</th> -->
-                    <th>Keterangan</th>
-<!--                     <th>statuss</th>
- -->
+         <div class="centers">
+  @foreach ($bio as $row)
+  <?php 
+    $currentChecked = 0;
+    foreach($row->requirements as $r) {
+      if($r->checkbox == 1) {
+        $currentChecked++;
+      }
+    }
+    $total = count($row->requirements);
+    $percentage = ($currentChecked/$total) * 100;
+  ?>
+      @if($row->status == 1)
+  <div class="card">
+    <div class="additional">
+      <div class="user-card">
+        <div class="percent center">
+          Persentase %
+        </div>             
+      </div>
+      <div class="more-info">
+        <h3 style="color:white">Persyaratan</h3>
 
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                @foreach ($bio as $row)
-                  <tr>
-                    <!-- {{-- <td>{{ $row->nama }}</td> --}} -->
-                    <td>{{ $row->namaaps }}</td>
-                    <td>
-                      @if ($row->status === '0') 
-                      <button type="button" class="btn btn-danger">Ditolak</button>
-                      @elseif ($row->status === '1') 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-success">Diterima</button>
+        @foreach ($row->requirements as $requirement)
+        <div class="coords">
+          <div style="font-size:13px">@if($requirement->checkbox == 1)
+                        <input type="checkbox" name="checkbox[]" checked onclick="return false" > {{$requirement->syarat}}
                       @else
-                      <button class="buttonload"><i class="fa fa-spinner fa-spin"></i> Menunggu Persetujuan</button>
-                      @endif
-                    </td>
-                    <!-- <td>{{ $row->penjelasan }}</td>
-                    <td>
-                      <a href="uploads/{{$row->lampiran}}" download="{{$row->lampiran}}">
-                        <button type="button" class="btn btn-primary">
-                          <i class="glyphicon glyphicon-download">
-                            Download
-                          </i>
-                         </button>
-                      </a>
-                    </td> -->
-                    
-                    <td>  
-                    @if ($row->status === '1') 
-                    <div class="btn-group">
-                      <a href="progress" type="button" class="btn btn-default">Lihat Progress</a>
-                    </div>
-                    @elseif ($row->status === '0') 
-                    {{ $row->keterangan }}
-                    @else
-                    <p>-</p>
-                    @endif 
-                    </td>
-<!--                   @foreach ($row->requirements as $requirement)
-                    <td>{{ $requirement->checkbox }}</td>
-                  @endforeach
- -->                    <td>
-                        <div class="btn-group">
-                          {{-- <a href="editrequest/{{ $row->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> --}}
-                          <a href="hapusrequest/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-                        </div>
-                    </td>
-                  </tr>
-                @endforeach
-                </tbody>
-                </div>
-            </table>
-            </div>
-            </div>
-            </div>
-            </div>
+                        <input type="checkbox" name="checkbox[]" onclick="return false" > {{$requirement->syarat}}
+                      @endif</div>
         </div>
-        <div style="text-align:center">
-        {{ $bio->links() }}
-        </div>
+        @endforeach
+       
+      </div>
+    </div>
+    <div class="general">
+      <h2><i class="fa fa-cogs" style="font-size:24px;color:#273c75;"></i> {{$row->namaaps}}</h2>
+      <h4>Progress bar</h4>
+      @if($percentage > 0)
+       <div class="w3-section w3-grey">
+       <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:{{$percentage}}%">{{$percentage}}%</div>
+       </div>
+      @else
+      <div class="w3-section w3-grey">
+       <div class="w3-container w3-padding-small w3-grey w3-center" style="width:{{$percentage}}%">{{$percentage}}%</div>
+       </div>
+      @endif
+    
+
+    </div>
+  </div>
+  @else
+    <div></div>
+    @endif
+@endforeach
+
+</div>
+              <div>
+            </div>
+            </div>
+        
     </div>
 </div>
 

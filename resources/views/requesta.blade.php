@@ -144,7 +144,14 @@
         <div class="row">
            <div class="col-md-12">
             <div class="container-fluid">
-          
+              <form action="/requesta" method="GET">
+
+              <input style="width:30vw;height:34px" type="text" name="cari" placeholder="Cari" value="{{ old('cari') }}">
+
+              <button type="submit" class="btn btn-primary"><i class= "fa fa-search" ></i></button>
+              </form>
+              <br>
+
               <div class="table-responsive">
               <table class="table table-striped table-bordered table-hover">
 
@@ -155,6 +162,7 @@
                     <th>Penjelasan</th>
                     <th>Lampiran</th>
                     <th>Status</th>
+
                     
                     <th>Action</th>
                   </tr>
@@ -180,17 +188,22 @@
                       @elseif ($row->status === '1') 
                       <button type="button" class="btn btn-success">Diterima</button>
                       @else
-                      <button type="button" class="btn btn-secondary">Waiting</button>
+                      <button type="button" class="btn btn-secondary">Menunggu</button>
                       @endif
                     </td>
                     <td>
                         <div class="btn-group">
                           <a href="editrequest/{{ $row->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-                          <a href="hapusrequest/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+<!--                         <a href="editprogress/{{ $row->id }}" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+ -->
+                          <a href="hapusrequesta/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                         </div>
                     </td>
                   </tr>
                 @endforeach
+
+
+
                 </tbody>
                 </div>
             </table>

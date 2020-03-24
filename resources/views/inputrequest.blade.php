@@ -41,13 +41,20 @@
                     <input type="file" name="lampiran">
                   </div>
                 </div> 
-                {{-- <div class="form-group">
-                  <label class="control-label col-sm-2">Status:</label>
-                  <div class="col-sm-10">          
-                    <textarea class="form-control" name="status"></textarea>
-                  </div>
-                </div> --}}
-                
+
+                <div class="form-group">
+                <label class="control-label col-sm-2">Syarat:</label>
+                 <div class="col-sm-10">          
+                <table class="col-sm-10" id="dynamic_field">  
+                <tr>  
+                        <td><input type="text" name="syarat[]" placeholder="" class="form-control name_list" /></td>  
+                        <td><button type="button" name="add" id="add" class="btn btn-success">+</button></td>  
+                    </tr> 
+                </table>
+              </div>
+                          </div> 
+
+               
                 
                 <!-- <div class="form-group">
                   <label class="control-label col-sm-2">Foto:</label>
@@ -64,5 +71,24 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){      
+      var postURL = "<?php echo url('addmore'); ?>";
+      var i=1;  
+
+
+      $('#add').click(function(){  
+           i++;  
+           $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="syarat[]" placeholder="" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+      });  
+
+
+      $(document).on('click', '.btn_remove', function(){  
+           var button_id = $(this).attr("id");   
+           $('#row'+button_id+'').remove();  
+      });  
+      });  
+</script>
 </body>
+
 </html>

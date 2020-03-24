@@ -46,12 +46,28 @@
                     <div class="form-group">
                       <label class="control-label col-sm-2">Status:</label>
                       <div class="col-sm-10">
+                        @if($request->status == null)
                         <div class="radio">
                         <label><input type="radio" name="status" value="1" >Diterima</label>
                         </div>
                         <div class="radio">
                         <label><input type="radio" name="status" value="0" >Ditolak</label>
                         </div>
+                        @elseif($request->status == 1)
+                        <div class="radio">
+                        <label><input type="radio" name="status" value="1" checked >Diterima</label>
+                        </div>
+                        <div class="radio">
+                        <label><input type="radio" name="status" value="0" >Ditolak</label>
+                        </div>
+                        @else
+                        <div class="radio">
+                        <label><input type="radio" name="status" value="1">Diterima</label>
+                        </div>
+                        <div class="radio">
+                        <label><input type="radio" name="status" value="0" checked >Ditolak</label>
+                        </div>
+                        @endif
                       </div>
                     </div>
                     
@@ -61,6 +77,23 @@
                         <textarea class="form-control" name="keterangan">{{ $request->keterangan }}</textarea>
                       </div>
                     </div>
+
+                    @foreach ($request->requirements as $requirement)
+                    <div class="form-group">
+                      <label class="control-label col-sm-2">Syarat: </label>
+                      <input type="hidden" name="ids[]" value="{{ $requirement->id }}">
+                      <div class="col-sm-8">          
+                        <textarea class="form-control" name="syarat[]">{{ $requirement->syarat }}</textarea>
+                      </div>
+                      @if($requirement->checkbox == 1)
+                        <input type="checkbox" name="checkbox[]" checked>
+                      @else
+                        <input type="checkbox" name="checkbox[]">
+                      @endif
+                    </div>
+                    @endforeach
+
+
                   
                 
 
