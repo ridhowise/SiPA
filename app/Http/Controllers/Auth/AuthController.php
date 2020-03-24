@@ -19,7 +19,7 @@ class AuthController extends Controller
     public function changePassword()
     {
         return view('auth.passwords.change')->with(
-            ['username' => Auth::user()->username]
+            ['email' => Auth::user()->email]
         );
     }
  

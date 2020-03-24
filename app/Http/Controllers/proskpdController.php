@@ -58,7 +58,7 @@ public function simpanproskpd(Request $request)
             $bio = new profileModel;
             $bio->name = $request->input('name');
             $bio->jabatan = $request->input('jabatan');
-            $bio->username = $request->input('username');
+            $bio->email = $request->input('email');
             $bio->password = bcrypt ($request->input('password'));
             $bio->foto = $fileName;
 

@@ -30,9 +30,9 @@
                 </div>
               </div>
               <!-- <div class="form-group">
-                <label class="control-label col-sm-2">username:</label>
+                <label class="control-label col-sm-2">email:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="{{ $admin->username }}" >
+                  <input type="text" class="form-control" name="{{ $admin->email }}" >
                 </div>
               </div> -->
 

@@ -77,23 +77,23 @@
             "authors": [
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "username": "kontakt@beberlei.de"
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
-                    "username": "jonwage@gmail.com"
+                    "email": "jonwage@gmail.com"
                 },
                 {
                     "name": "Johannes Schmitt",
-                    "username": "schmittjoh@gmail.com"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Common String Manipulations with regard to casing and singular/plural rules.",
@@ -139,7 +139,7 @@
             "authors": [
                 {
                     "name": "Emanuil Rusev",
-                    "username": "hello@erusev.com",
+                    "email": "hello@erusev.com",
                     "homepage": "http://erusev.com"
                 }
             ],
@@ -188,7 +188,7 @@
             "authors": [
                 {
                     "name": "Jakub Onderka",
-                    "username": "jakub.onderka@gmail.com",
+                    "email": "jakub.onderka@gmail.com",
                     "homepage": "http://www.acci.cz"
                 }
             ],
@@ -232,7 +232,7 @@
             "authors": [
                 {
                     "name": "Jakub Onderka",
-                    "username": "acci@acci.cz",
+                    "email": "acci@acci.cz",
                     "homepage": "http://www.acci.cz/"
                 }
             ],
@@ -356,7 +356,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Laravel Framework.",
@@ -418,7 +418,7 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "username": "taylor@laravel.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "Powerful REPL for the Laravel framework.",
@@ -488,7 +488,7 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "username": "info@frenky.net"
+                    "email": "info@frenky.net"
                 }
             ],
             "description": "Filesystem abstraction: Many filesystems, one API.",
@@ -578,7 +578,7 @@
             "authors": [
                 {
                     "name": "Jordi Boggiano",
-                    "username": "j.boggiano@seld.be",
+                    "email": "j.boggiano@seld.be",
                     "homepage": "http://seld.be"
                 }
             ],
@@ -624,7 +624,7 @@
             "authors": [
                 {
                     "name": "Michael Dowling",
-                    "username": "mtdowling@gmail.com",
+                    "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
@@ -676,7 +676,7 @@
             "authors": [
                 {
                     "name": "Brian Nesbitt",
-                    "username": "brian@nesbot.com",
+                    "email": "brian@nesbot.com",
                     "homepage": "http://nesbot.com"
                 }
             ],
@@ -776,7 +776,7 @@
             "authors": [
                 {
                     "name": "Paragon Initiative Enterprises",
-                    "username": "security@paragonie.com",
+                    "email": "security@paragonie.com",
                     "homepage": "https://paragonie.com"
                 }
             ],
@@ -893,7 +893,7 @@
             "authors": [
                 {
                     "name": "Justin Hileman",
-                    "username": "justin@justinhileman.info",
+                    "email": "justin@justinhileman.info",
                     "homepage": "http://justinhileman.com"
                 }
             ],
@@ -968,15 +968,15 @@
             "authors": [
                 {
                     "name": "Marijn Huizendveld",
-                    "username": "marijn.huizendveld@gmail.com"
+                    "email": "marijn.huizendveld@gmail.com"
                 },
                 {
                     "name": "Thibaud Fabre",
-                    "username": "thibaud@aztech.io"
+                    "email": "thibaud@aztech.io"
                 },
                 {
                     "name": "Ben Ramsey",
-                    "username": "ben@benramsey.com",
+                    "email": "ben@benramsey.com",
                     "homepage": "https://benramsey.com"
                 }
             ],
@@ -1031,13 +1031,13 @@
                 },
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
             "homepage": "http://swiftmailer.org",
             "keywords": [
-                "username",
+                "email",
                 "mail",
                 "mailer"
             ],
@@ -1101,7 +1101,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1150,11 +1150,11 @@
             "authors": [
                 {
                     "name": "Jean-François Simon",
-                    "username": "jeanfrancois.simon@sensiolabs.com"
+                    "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1210,7 +1210,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1273,7 +1273,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1322,7 +1322,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1376,7 +1376,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1464,7 +1464,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1516,7 +1516,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1576,7 +1576,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1631,7 +1631,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1703,7 +1703,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1777,7 +1777,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1842,7 +1842,7 @@
             "authors": [
                 {
                     "name": "Nicolas Grekas",
-                    "username": "p@tchwork.com"
+                    "email": "p@tchwork.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -1896,11 +1896,11 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "username": "css_to_inline_styles@verkoyen.eu",
+                    "email": "css_to_inline_styles@verkoyen.eu",
                     "role": "Developer"
                 }
             ],
-            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending usernames.",
+            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27T11:13:29+00:00"
         },
@@ -1942,7 +1942,7 @@
             "authors": [
                 {
                     "name": "Vance Lucas",
-                    "username": "vance@vancelucas.com",
+                    "email": "vance@vancelucas.com",
                     "homepage": "http://www.vancelucas.com"
                 }
             ],
@@ -2004,23 +2004,23 @@
             "authors": [
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "username": "kontakt@beberlei.de"
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Jonathan Wage",
-                    "username": "jonwage@gmail.com"
+                    "email": "jonwage@gmail.com"
                 },
                 {
                     "name": "Johannes Schmitt",
-                    "username": "schmittjoh@gmail.com"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
@@ -2090,19 +2090,19 @@
             "authors": [
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "username": "kontakt@beberlei.de"
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Jonathan Wage",
-                    "username": "jonwage@gmail.com"
+                    "email": "jonwage@gmail.com"
                 }
             ],
             "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
@@ -2172,27 +2172,27 @@
             "authors": [
                 {
                     "name": "Guilherme Blanco",
-                    "username": "guilhermeblanco@gmail.com"
+                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Roman Borschel",
-                    "username": "roman@code-factory.org"
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
-                    "username": "kontakt@beberlei.de"
+                    "email": "kontakt@beberlei.de"
                 },
                 {
                     "name": "Jonathan Wage",
-                    "username": "jonwage@gmail.com"
+                    "email": "jonwage@gmail.com"
                 },
                 {
                     "name": "Johannes Schmitt",
-                    "username": "schmittjoh@gmail.com"
+                    "email": "schmittjoh@gmail.com"
                 },
                 {
                     "name": "Marco Pivetta",
-                    "username": "ocramius@gmail.com"
+                    "email": "ocramius@gmail.com"
                 }
             ],
             "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
@@ -2248,7 +2248,7 @@
             "authors": [
                 {
                     "name": "Marco Pivetta",
-                    "username": "ocramius@gmail.com",
+                    "email": "ocramius@gmail.com",
                     "homepage": "http://ocramius.github.com/"
                 }
             ],
@@ -2395,12 +2395,12 @@
             "authors": [
                 {
                     "name": "Pádraic Brady",
-                    "username": "padraic.brady@gmail.com",
+                    "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 },
                 {
                     "name": "Dave Marshall",
-                    "username": "dave.marshall@atstsolutions.co.uk",
+                    "email": "dave.marshall@atstsolutions.co.uk",
                     "homepage": "http://davedevelopment.co.uk"
                 }
             ],
@@ -2505,7 +2505,7 @@
             "authors": [
                 {
                     "name": "Jaap van Otterdijk",
-                    "username": "opensource@ijaap.nl"
+                    "email": "opensource@ijaap.nl"
                 }
             ],
             "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
@@ -2558,7 +2558,7 @@
             "authors": [
                 {
                     "name": "Mike van Riel",
-                    "username": "me@mikevanriel.com"
+                    "email": "me@mikevanriel.com"
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
@@ -2606,7 +2606,7 @@
             "authors": [
                 {
                     "name": "Mike van Riel",
-                    "username": "me@mikevanriel.com"
+                    "email": "me@mikevanriel.com"
                 }
             ],
             "time": "2017-07-14T14:27:02+00:00"
@@ -2654,12 +2654,12 @@
             "authors": [
                 {
                     "name": "Konstantin Kudryashov",
-                    "username": "ever.zet@gmail.com",
+                    "email": "ever.zet@gmail.com",
                     "homepage": "http://everzet.com"
                 },
                 {
                     "name": "Marcello Duarte",
-                    "username": "marcello.duarte@gmail.com"
+                    "email": "marcello.duarte@gmail.com"
                 }
             ],
             "description": "Highly opinionated mocking framework for PHP 5.3+",
@@ -2724,7 +2724,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sb@sebastian-bergmann.de",
+                    "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
             ],
@@ -2772,7 +2772,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sb@sebastian-bergmann.de",
+                    "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
             ],
@@ -2814,7 +2814,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -2863,7 +2863,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sb@sebastian-bergmann.de",
+                    "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
             ],
@@ -2913,7 +2913,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Wrapper around PHP's tokenizer extension.",
@@ -2992,7 +2992,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -3052,7 +3052,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sb@sebastian-bergmann.de",
+                    "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
             ],
@@ -3103,7 +3103,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Looks up which function or method a line of code belongs to",
@@ -3150,19 +3150,19 @@
             "authors": [
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Volker Dusch",
-                    "username": "github@wallbash.com"
+                    "email": "github@wallbash.com"
                 },
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@2bepublished.at"
+                    "email": "bschussek@2bepublished.at"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Provides the functionality to compare PHP values for equality",
@@ -3212,11 +3212,11 @@
             "authors": [
                 {
                     "name": "Kore Nordmann",
-                    "username": "mail@kore-nordmann.de"
+                    "email": "mail@kore-nordmann.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Diff implementation",
@@ -3264,7 +3264,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Provides functionality to handle HHVM/PHP environments",
@@ -3316,23 +3316,23 @@
             "authors": [
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Volker Dusch",
-                    "username": "github@wallbash.com"
+                    "email": "github@wallbash.com"
                 },
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@2bepublished.at"
+                    "email": "bschussek@2bepublished.at"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Adam Harvey",
-                    "username": "aharvey@php.net"
+                    "email": "aharvey@php.net"
                 }
             ],
             "description": "Provides the functionality to export PHP variables for visualization",
@@ -3384,7 +3384,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Snapshotting of global state",
@@ -3433,7 +3433,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
@@ -3478,15 +3478,15 @@
             "authors": [
                 {
                     "name": "Jeff Welch",
-                    "username": "whatthejeff@gmail.com"
+                    "email": "whatthejeff@gmail.com"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 },
                 {
                     "name": "Adam Harvey",
-                    "username": "aharvey@php.net"
+                    "email": "aharvey@php.net"
                 }
             ],
             "description": "Provides functionality to recursively process PHP variables",
@@ -3528,7 +3528,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
@@ -3570,7 +3570,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "username": "sebastian@phpunit.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -3625,7 +3625,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "username": "fabien@symfony.com"
+                    "email": "fabien@symfony.com"
                 },
                 {
                     "name": "Symfony Community",
@@ -3675,7 +3675,7 @@
             "authors": [
                 {
                     "name": "Bernhard Schussek",
-                    "username": "bschussek@gmail.com"
+                    "email": "bschussek@gmail.com"
                 }
             ],
             "description": "Assertions to validate method input/output with nice error messages.",
@@ -3726,7 +3726,7 @@
             "authors": [
                 {
                     "name": "Jeffrey Way",
-                    "username": "jeffrey@jeffrey-way.com"
+                    "email": "jeffrey@jeffrey-way.com"
                 }
             ],
             "description": "Rapidly generate resources, migrations, models, and much more.",
@@ -3779,7 +3779,7 @@
             "authors": [
                 {
                     "name": "Bernhard Breytenbach",
-                    "username": "bernhard@coffeecode.co.za"
+                    "email": "bernhard@coffeecode.co.za"
                 }
             ],
             "description": "Generates Laravel Migrations from an existing database",

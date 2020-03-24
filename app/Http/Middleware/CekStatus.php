@@ -17,7 +17,7 @@ class CekStatus
     public function handle($request, Closure $next)
     {
         if (Auth::user()->jabatan === 'admin') {
-        // $user =\App\Users::where('username',$request->username)->first();
+        // $user =\App\Users::where('email',$request->email)->first();
         // // dd($user->jabatan);
         // if ($user->jabatan === 'admin') {
             return redirect('/admin');
