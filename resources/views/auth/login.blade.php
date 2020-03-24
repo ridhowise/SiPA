@@ -19,8 +19,8 @@
                         left: calc(50% - 50px);">
                            
                     <img class="card-img-top" src="{{asset('assets_home/img/logo.png')}}" class="img-responsive" style="width:7%;opacity:0"/>
-                    <h3> SiPA</h3>
-                    <h5 style="opacity:0.8">Sistem Pengajuan Aplikasi</h5>
+                    <h3> SMPA</h3>
+                    <h5 style="opacity:0.8">Sistem Manajemen Pengembangan Aplikasi</h5>
                     {{-- <h5> Pemeritah Kabupaten Minahasa Tenggara </h5> --}}
                 </div>                <div class="panel-body" style="margin-top: 3%; margin-bottom: 3%">
                     
