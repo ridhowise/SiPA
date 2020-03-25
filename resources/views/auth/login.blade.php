@@ -31,7 +31,7 @@
                             <label for="email" class="col-md-3 control-label"></label>
 
                             <div class="col-md-6">
-                                <input style="border:solid 2px #c0c0c0"placeholder="email" id="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <input style="border:solid 2px #c0c0c0"placeholder="username" id="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
