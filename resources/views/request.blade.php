@@ -114,6 +114,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
               <div class="container-fluid">
+                
 
                   <button type="button" id="sidebarCollapse" class="btn btn-default">
                       <i class="fa fa-align-left"></i>
@@ -139,7 +140,7 @@
         <div class="row">
            <div class="col-md-12">
             <div class="container-fluid">
-         
+              
               <div class="table-responsive">
               <table class="table table-striped table-bordered table-hover">
 

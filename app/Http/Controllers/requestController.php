@@ -102,7 +102,7 @@ public function ubahrequest(Request $request)
                 $reqq->save();
             }
      
-    return redirect()->action('dashboardController@dashboard')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
+    return redirect()->action('requestaController@ubah')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
 
 public function getDelete($id)

@@ -27,7 +27,7 @@ class requestaController extends BaseController
     return view('inputrequesta');
 }
  
-public function simpanrequesta(Requesta $requasta)
+public function simpanrequesta(Request $requesta)
 {
     $file = Input::file('lampiran');
  
@@ -39,13 +39,15 @@ public function simpanrequesta(Requesta $requasta)
          
         if ($upload_success){
             $bio = new requestaModel;
-            $bio->nama = $requasta->input('nama');
-            $bio->namaaps = $requasta->input('namaaps');
-            $bio->penjelasan = $requasta->input('penjelasan');
+            $bio->nama = $requesta->input('nama');
+            $bio->namaaps = $requesta->input('namaaps');
+            $bio->penjelasan = $requesta->input('penjelasan');
             $bio->lampiran = $fileName;
-            $bio->status = $requasta->input('status');
+            $bio->status = $requesta->input('status');
  
             $bio->save();
+
+            
              
             return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Disimpan ! ')->with('msg', 'Menunggu persetujuan');
         
@@ -56,25 +58,26 @@ public function simpanrequesta(Requesta $requasta)
 
 public function getEdit($id)
 {
-    return view('editrequesta', ['requesta' => requestaModel::findOrFail($id)]);
+    return view('editrequesta', ['requesta' => requestaModel::with("requirements")->findOrFail($id)]);
 }
  
-public function ubahrequesta(Requesta $requasta)
+public function ubahrequesta(Request $requesta)
 {
     $bio     = new requestaModel;
-    $id     = $requasta->input('id');
+    $id     = $requesta->input('id');
     $bio     = requestaModel::find($id);
      
-    $bio->nama = $requasta->input('nama');
-    $bio->namaaps = $requasta->input('namaaps');
-    $bio->penjelasan = $requasta->input('penjelasan');
-    $bio->lampiran = $requasta->input('lampiran');
-    $bio->status = $requasta->input('status');
+    $bio->nama = $requesta->input('nama');
+    $bio->namaaps = $requesta->input('namaaps');
+    $bio->penjelasan = $requesta->input('penjelasan');
+    $bio->lampiran = $requesta->input('lampiran');
+    $bio->status = $requesta->input('status');
 
 
     $bio->save();
+
      
-    return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
+    return redirect()->action('requestController@request')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
 
 public function getDelete($id)
@@ -83,7 +86,7 @@ public function getDelete($id)
     $bio     = requestaModel::find($id);
     $bio->delete();
      
-    return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
+    return redirect()->action('requestaController@ubah')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
 
 public function cari(Request $requesta)
@@ -100,6 +103,14 @@ public function cari(Request $requesta)
             // mengirim data pegawai ke view index
         return view('requesta',['bio' => $bio]);
  
+    }
+    public function ubah()
+    {
+        $bio = requestaModel::paginate(5);
+        $reqq = requirementModel::get();
+
+        // $bio = requestModel::get();
+        return view('requesta', ['bio' => $bio]);
     }
 
 public function downfunc(){
