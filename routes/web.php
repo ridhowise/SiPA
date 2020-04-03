@@ -68,7 +68,6 @@ Route::get('/dashboard', 'dashboardController@dashboard')->name('admin')->middle
 
   Route::get('/requesta', 'requestaController@requesta')->name('admin')->middleware('adminchecker');
   Route::get('/requesta','requestaController@cari');
-  Route::get('/requesta','requestaController@ubah');
   Route::get('/inputrequesta', 'requestaController@getInput');
   Route::post('/inputrequesta', 'requestaController@simpanrequest');
   Route::get('/editrequesta/{id}', 'requestaController@getEdit');

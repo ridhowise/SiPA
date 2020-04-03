@@ -86,7 +86,7 @@ public function getDelete($id)
     $bio     = requestaModel::find($id);
     $bio->delete();
      
-    return redirect()->action('requestaController@ubah')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
+    return redirect()->action('dashboardController@dashboard')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
 
 public function cari(Request $requesta)
@@ -104,14 +104,7 @@ public function cari(Request $requesta)
         return view('requesta',['bio' => $bio]);
  
     }
-    public function ubah()
-    {
-        $bio = requestaModel::paginate(5);
-        $reqq = requirementModel::get();
-
-        // $bio = requestModel::get();
-        return view('requesta', ['bio' => $bio]);
-    }
+    
 
 public function downfunc(){
     	$bio=DB::table('request')->get();
