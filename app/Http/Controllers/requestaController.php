@@ -95,7 +95,7 @@ public function cari(Request $requesta)
         $cari = $requesta->cari;
  
             // mengambil data dari table pegawai sesuai pencarian data        
-        $bio = DB::table('request')
+        $bio = requestaModel::with("requirements")
         ->where('nama','LIKE',"%{$cari}%")
         ->orWhere('namaaps', 'LIKE', "%{$cari}%") 
         ->paginate(5);
