@@ -1512,7 +1512,7 @@ html, body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1536,6 +1536,7 @@ html, body {
   height: 25px;
   width: 25px;
   background-color: #eee;
+  border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
@@ -1545,7 +1546,7 @@ html, body {
 
 /* When the checkbox is checked, add a blue background */
 .contain input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color:#273c75;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -1571,4 +1572,48 @@ html, body {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+
+/* Create a custom radio button */
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.contain:hover input ~ .dot {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.contain input:checked ~ .dot {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.dot:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.contain input:checked ~ .dot:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.contain .dot:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }

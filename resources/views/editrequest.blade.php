@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/style.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/a12e4b80ba37476a3fd274b7475f705566808073/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -159,25 +159,37 @@
                                 <div class="col-sm-10">
                                   @if($request->status == null)
                                   <div class="radio">
-                                  <label><input type="radio" name="status" value="1" >Diterima</label>
+                                  <label class="contain" ><input type="radio" name="status" value="1" ><h5>- Diterima</h5>
+                                  <span class="dot"></span>
+                                  </label>
                                   </div>
                                   <div class="radio">
-                                  <label><input type="radio" name="status" value="0" >Ditolak</label>
+                                  <label class="contain" ><input type="radio" name="status" value="0" ><h5>- Ditolak</h5>
+                                  <span class="dot"></span>
+                                  </label>
                                   </div>
                                   @elseif($request->status == 1)
                                   <div class="radio">
-                                  <label><input type="radio" name="status" value="1" checked >Diterima</label>
-                                  </div>
-                                  <div class="radio">
-                                  <label><input type="radio" name="status" value="0" >Ditolak</label>
-                                  </div>
+                                    <label class="contain" ><input type="radio" name="status" value="1" checked > <h5>- Diterima</h5>
+                                    <span class="dot"></span>
+                                    </label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="contain" ><input type="radio" name="status" value="0" ><h5>- Ditolak</h5>
+                                    <span class="dot"></span>
+                                    </label>
+                                    </div>
                                   @else
                                   <div class="radio">
-                                  <label><input type="radio" name="status" value="1">Diterima</label>
-                                  </div>
-                                  <div class="radio">
-                                  <label><input type="radio" name="status" value="0" checked >Ditolak</label>
-                                  </div>
+                                    <label class="contain" ><input type="radio" name="status" value="1" ><h5>- Diterima</h5>
+                                    <span class="dot"></span>
+                                    </label>
+                                    </div>
+                                    <div class="radio">
+                                    <label class="contain" ><input type="radio" name="status" value="0" checked ><h5>- Ditolak</h5>
+                                    <span class="dot"></span>
+                                    </label>
+                                    </div>
                                   @endif
                                 </div>
                               </div>
@@ -188,20 +200,23 @@
                                   <textarea class="form-control" name="keterangan">{{ $request->keterangan }}</textarea>
                                 </div>
                               </div>
-          
+                              <div class="form-group">
+                                <label class="control-label col-sm-2">Syarat: </label>
+                              </div>
                               @foreach ($request->requirements as $requirement)
                               <div class="form-group">
+                                <label class="control-label col-sm-2"> </label>
                                 <input type="hidden" name="ids[]" value="{{ $requirement->id }}">
-                              
-                                <label class="contain">{{ $requirement->syarat }}
-                                  @if($requirement->checkbox == 1)
+                                <div class="col-sm-8">
+                                <label class="contain"><h5>{{ $requirement->syarat }}</h5>
+                                @if($requirement->checkbox == 1)
                                   <input type="checkbox" name="checkbox[]" checked>
                                 @else
                                   <input type="checkbox" name="checkbox[]">
                                 @endif
                                   <span class="checkmark"></span>
                                 </label>
-                                
+                              </div>
                               </div>
                               @endforeach
         
