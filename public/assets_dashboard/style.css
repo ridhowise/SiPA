@@ -1594,7 +1594,7 @@ html, body {
 
 /* When the radio button is checked, add a blue background */
 .contain input:checked ~ .dot {
-  background-color: #2196F3;
+  background-color:#273c75;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
