@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/cb4c3821eaf993d63ccb9b447ba9f1f2dc08164d/public/assets_dashboard/style.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/78fcd0b01fd60387f8410471f12b1b3c3947af2b/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -99,7 +99,7 @@
                   </li> -->
               </ul> --}}
           </li>
-          <li>
+          <li class="active">
               <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Pengajuan Aplikasi</a>
           </li>
           <li  >
@@ -200,11 +200,7 @@
                                   <textarea class="form-control" name="keterangan">{{ $request->keterangan }}</textarea>
                                 </div>
                               </div>
-                              <div class="form-group">
-                                <label class="control-label col-sm-2">Persyaratan: </label>
-                                <div class="col-sm-10">
-                                </div>
-                              </div>
+                              
                               @foreach ($request->requirements as $requirement)
                               <div class="form-group">
                                 <label class="control-label col-sm-2"></label>

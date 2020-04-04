@@ -160,13 +160,17 @@
       </div>
       <div class="more-info">
         <h3 style="color:white">Persyaratan</h3>
-
+        
         @foreach ($row->requirements as $requirement)
         <div class="coords">
           <div style="font-size:13px">@if($requirement->checkbox == 1)
-                        <input type="checkbox" name="checkbox[]" checked onclick="return false" > {{$requirement->syarat}}
+                        <label class="contain"><h5>{{ $requirement->syarat }}</h5>
+                        <input type="checkbox" name="checkbox[]" checked onclick="return false" >
+                        <span class="checkmark"></span> </label>
                       @else
-                        <input type="checkbox" name="checkbox[]" onclick="return false" > {{$requirement->syarat}}
+                        <label class="contain"><h5>{{ $requirement->syarat }}</h5>
+                        <input type="checkbox" name="checkbox[]" onclick="return false" > 
+                        <span class="checkmark"></span> </label>
                       @endif</div>
         </div>
         @endforeach

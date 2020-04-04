@@ -1547,7 +1547,7 @@ html, body {
 
 /* When the checkbox is checked, add a blue background */
 .contain input:checked ~ .checkmark {
-  background-color:#273c75;
+  background-color:#192a56;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
