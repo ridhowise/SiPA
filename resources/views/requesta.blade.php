@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="assets_dashboard/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="assets_dashboard/img/logo.png"></a>
+      <a class="navbar-brand" href="#"><img src="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/img/logo.png"></a>
     </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -144,7 +144,7 @@
         <div class="row">
            <div class="col-md-12">
             <div class="container-fluid">
-              <form action="/requesta" method="GET">
+              <form action="/requesta/cari" method="GET">
 
               <input style="width:30vw;height:34px" type="text" name="cari" placeholder="Cari" value="{{ old('cari') }}">
 
@@ -193,10 +193,8 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                          <a href="editrequest/{{ $row->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-<!--                         <a href="editprogress/{{ $row->id }}" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
- -->
-                          <a href="hapusrequesta/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                          <a href="../editrequest/{{ $row->id }}" type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                          <a href="hapusrequesta/{{ $row->id }}"type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                         </div>
                     </td>
                   </tr>

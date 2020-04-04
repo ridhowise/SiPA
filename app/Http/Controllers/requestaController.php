@@ -15,7 +15,7 @@ class requestaController extends BaseController
 {
     public function requesta()
     {
-        $bio = requestaModel::paginate(5);
+        $bio = requestaModel::with("requirements")->paginate(5);
         $reqq = requirementModel::get();
 
         // $bio = requestModel::get();
@@ -86,7 +86,7 @@ public function getDelete($id)
     $bio     = requestaModel::find($id);
     $bio->delete();
      
-    return redirect()->action('dashboardController@dashboard')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
+    return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
 
 public function cari(Request $requesta)

@@ -76,10 +76,7 @@ public function ubahrequest(Request $request)
     $id     = $request->input('id');
     $bio     = requestModel::find($id);
      
-    $bio->nama = $request->input('nama');
     $bio->namaaps = $request->input('namaaps');
-    $bio->penjelasan = $request->input('penjelasan');
-    $bio->lampiran = $request->input('lampiran');
     $bio->status = $request->input('status');
     $bio->keterangan = $request->input('keterangan');
 
@@ -102,7 +99,7 @@ public function ubahrequest(Request $request)
                 $reqq->save();
             }
      
-    return redirect()->action('dashboardController@dashboard')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
+    return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
 
 public function getDelete($id)
@@ -113,6 +110,7 @@ public function getDelete($id)
      
     return redirect()->action('requestController@request')->with('style', 'success')->with('alert', 'Berhasil Dihapus ! ')->with('msg', 'Data Dihapus Di Database');
 }
+
 
 
 
