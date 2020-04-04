@@ -162,6 +162,7 @@
                     <th>Penjelasan</th>
                     <th>Lampiran</th>
                     <th>Status</th>
+                    <th>Progress</th>
 
                     
                     <th>Action</th>
@@ -191,6 +192,22 @@
                       <button type="button" class="btn btn-secondary">Menunggu</button>
                       @endif
                     </td>
+                    <?php 
+                    $currentChecked = 0;
+                    foreach($row->requirements as $r) {
+                    if($r->checkbox == 1) {
+                    $currentChecked++;
+                    }
+                    }
+                    $total = count($row->requirements);
+                    $percentage = ($currentChecked/$total) * 100;
+                   ?>
+                   @if ($row->status === '1')
+                     <td>{{ $percentage }}%</td>
+                  @else 
+                     <td>-</td>
+                  @endif
+
                     <td>
                         <div class="btn-group">
                           <a href="../editrequest/{{ $row->id }}" type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/b69a94fdb8665a29f11c31d027efa70bf9a8b9cb/public/assets_dashboard/style.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -137,18 +137,12 @@
         <strong>{{Session::get('alert')}}</strong>{{Session::get('msg')}}
     </div>
     @endif
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Ubah Pengajuan</h2>
-        </div>
-        <div class="modal-body">
-          <br>
+    
               
               <div class="container-fluid">
-                
+                <div class="panel panel-default">
+                  <div class="panel-heading">Edit {{ $request->namaaps }}</div>
+                  <div class="panel-body">
                       <form class="form-horizontal" action=""  method="post">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <input type="hidden" name="id" value="{{ $request->id }}">
@@ -197,16 +191,17 @@
           
                               @foreach ($request->requirements as $requirement)
                               <div class="form-group">
-                                <label class="control-label col-sm-2">Syarat: </label>
                                 <input type="hidden" name="ids[]" value="{{ $requirement->id }}">
-                                <div class="col-sm-8">          
-                                  <textarea class="form-control" name="syarat[]">{{ $requirement->syarat }}</textarea>
-                                </div>
-                                @if($requirement->checkbox == 1)
+                              
+                                <label class="contain">{{ $requirement->syarat }}
+                                  @if($requirement->checkbox == 1)
                                   <input type="checkbox" name="checkbox[]" checked>
                                 @else
                                   <input type="checkbox" name="checkbox[]">
                                 @endif
+                                  <span class="checkmark"></span>
+                                </label>
+                                
                               </div>
                               @endforeach
         
@@ -218,13 +213,8 @@
                       </form>
                   </div>
                 </div>
+            </div>
             
-          <div class="modal-footer">
-            <h3>Sistem Manajemen Pengembangan Aplikasi </h3>
-          </div>
-        </div>
-      
-      </div>
             
 
 </body>
