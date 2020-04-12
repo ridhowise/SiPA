@@ -13,7 +13,7 @@ class adminController extends BaseController
 {
     public function admin()
     {
-        $bio = AdminModel::paginate(4);
+        $bio = AdminModel::paginate(6);
         // $bio = adminModel::get();
         return view('admin', ['bio' => $bio]);
     }
@@ -25,7 +25,23 @@ class adminController extends BaseController
 
 public function simpanadmin(Request $request)
 {
-    
+    $file = Input::file('foto');
+    $valfile = array('image' => $file);
+    $valrules = array('image' => 'image');
+
+    $validator = Validator::make($valfile, $valrules);
+    if ($validator->fails()) {
+        return redirect()->action('adminController@admin')->with('style', 'danger')->with('alert', 'Gagal Di Upload ! ')->with('msg', 'Cek Tipe File');
+    }else{
+        $destinationPath = 'uploads';
+        $size = $file->getSize();
+        $extension = $file->getClientOriginalExtension();
+        $fileName = $file->getClientOriginalName();
+        $upload_success = $file->move($destinationPath, $fileName);
+
+
+        if ($upload_success){
+
           if (! function_exists('bcrypt')) {
     /**
      * Hash the given value against the bcrypt algorithm.
@@ -44,7 +60,7 @@ public function simpanadmin(Request $request)
             $bio->jabatan = $request->input('jabatan');
             $bio->email = $request->input('email');
             $bio->password = bcrypt ($request->input('password'));
-            // $bio->foto = $fileName;
+            $bio->foto = $fileName;
 
             $bio->save();
 
@@ -52,20 +68,22 @@ public function simpanadmin(Request $request)
 
 
 }
+}
+}
 
 
 
 public function getEdit($id)
 {
-    return view('editadmin', ['admin' => adminModel::findOrFail($id)]);
+    return view('editadmin', ['admin' => AdminModel::findOrFail($id)]);
 }
 
 public function ubahadmin(Request $request)
 {
 
-    $bio     = new adminModel;
+    $bio     = new AdminModel;
     $id     = $request->input('id');
-    $bio     = adminModel::find($id);
+    $bio     = AdminModel::find($id);
 
     $bio->name = $request->input('name');
     $bio->jabatan = $request-> input('jabatan');
@@ -80,7 +98,6 @@ public function ubahadmin(Request $request)
 
 public function getDelete($id)
 {
-    $bio     = new AdminModel;
     $bio     = AdminModel::find($id);
     $bio->delete();
 

@@ -1618,3 +1618,115 @@ html, body {
 	border-radius: 50%;
 	background: white;
 }
+
+
+.movie-card {
+  font: 14px/22px "Lato", Arial, sans-serif;
+  color: #A9A8A3;
+  padding: 40px 0;
+}
+
+.container-card {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.hero {
+  height: 250px;  
+  margin:0;
+  position: relative;
+  overflow: hidden;
+  z-index:1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+    
+}
+
+.hero:before {
+  content:'';
+  width:100%; height:100%;
+  position:absolute;
+  overflow: hidden;
+  top:0; left:0;
+  background:	#080928;
+  background-image: url("../uploads/manado.jpg");
+  background-repeat: no-repeat;
+  z-index:-1;
+ 
+  
+  
+}
+
+.cover {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.details {
+  
+  padding: 150px 0 0 280px;
+}
+
+  .title1 {
+    color: white;
+    font-size: 44px;
+    margin-bottom: 13px;
+    position: relative;
+    text-shadow: 2px 2px 4px #000000;
+  }
+   
+  .title2 {    
+    color: #fff;
+    font-size: 24px;    
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+
+.description {
+  
+  bottom: 0px;
+  height: 200px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B1B0AC;
+  
+}
+
+.column1 {
+  padding-left: 50px;
+  padding-top: 120px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.column2 {
+  padding-left: 41px;
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 480px;
+  float: left;
+}
+
+.cardadmin {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: auto;
+}
+
+.cardadmin:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containeradmin {
+  padding: 2px 16px;
+}

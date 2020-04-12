@@ -173,8 +173,51 @@
       <a href="/password/change" class="small-box-footer"><i class="fa fa-arrow-circle-right" style="font-size:24px;color:white;"></i></a>
     </div>
   </div>
-  
-  
+
+  @foreach ($bio as $row)
+
+<?php 
+$currentChecked = 0;
+foreach($row->requirements as $r) {
+if($r->checkbox == 1) {
+$currentChecked++;
+    }
+  }
+  $total = count($row->requirements);
+  $percentage = ($currentChecked/$total) * 100;
+?>
+@if ($percentage == '100')
+<div class="col-sm-12">
+  <div class="movie-card">
+    <div class="container-card">
+      <a href="#"><img style="width:187px" src="uploads/{{ Auth::user()->foto}}" alt="cover" class="cover" /></a>
+      <div class="hero">         
+        <div class="details">
+          <div class="title1"><i class="fa fa-cogs" style="font-size:40px;color:white;"></i> {{ $row->namaaps }}</div>
+          <div class="title2">{{ $row->nama }}</div>    
+        </div> <!-- end details -->
+      </div> <!-- end hero -->
+      <div class="description">
+        <div class="column1">
+          <a href="{{$row->keterangan}}" type="button" class="btn btn-primary btn-lg btn-block">LINK DEMO</a>
+        </div> <!-- end column1 -->
+        <div class="column2">
+          <p>{{ $row->penjelasan }}</p>
+        </div> <!-- end column2 -->
+      </div> <!-- end description -->
+    </div> <!-- end container -->
+  </div> <!-- end movie-card -->
+
+</div>
+@else 
+<div></div>
+@endif
+@endforeach
+
+<div style="text-align:center">
+  {{ $bio->links() }}
+  </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -101,7 +101,7 @@
             </ul> --}}
         </li>
         <li >
-            <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Pengajuan Aplikasi</a>
+            <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Daftar Pengajuan </a>
         </li>
         <li class="active" >
           <a href="/admin"><i class="fa fa-building" style="font-size:24px;color:white;opacity:0.5;"></i> SKPD</a>
@@ -137,7 +137,7 @@
     @endif
 
     <div class="panel panel-default">
-        <div class="panel-heading">admin &nbsp;
+        <div class="panel-heading">SKPD &nbsp;
         <a href="inputadmin" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
         </div>
         <div class="panel-body">
@@ -146,37 +146,25 @@
             <div class="container-fluid">
 
             @foreach($bio as $row)
-            <div class="col-md-6">
+            @if ($row->jabatan == 'user')
+            <div class="col-md-4">
+              <div class="cardadmin" style="text-align:center">
+                <img src="assets_dashboard/img/person.png" alt="Avatar" style="width:100%">
+                <div class="containeradmin">
+                  <h4><b>{{$row->name}}</b></h4> 
+                  <p>SKPD</p> 
+                  <a href="editadmin/{{$row ->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
-            <div class="w3-container" style="text-align:center">
-
-
-  <div class="w3-card-4 w3-indigo" style="width:100%">
-
-    <div class="w3-container w3-center">
-      <h5>{{$row->name}}</h5>
-      <i class= "fa fa-user" ></i>
-      {{-- <img src="uploads/{{$row->foto}}" alt="Avatar" style="width:200px;height:200px;border-radius:50%;"> --}}
-      <h5>{{ $row->jabatan}}</h5>
-    </div>
-    <div class="btn-group">
-   
-      <a href="editadmin/{{$row ->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-      
-      <!-- <a style="display:none;" href="hapusbiodata/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> -->
-      <br>
-      <br>
-    </div>
-
-  </div>
-
-<br>
-
-</div>
-
-
+                  <a style="" href="hapusadmin/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>            
+                </div>
+              </div>
+              <br>
         </div>
+        @else 
+        <div></div>
+        @endif
   @endforeach
+  
   <div class="col-md-12"
   <div style="text-align:center">
   {{ $bio->links() }}
