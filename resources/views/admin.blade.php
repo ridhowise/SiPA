@@ -106,7 +106,9 @@
         <li class="active" >
           <a href="/admin"><i class="fa fa-building" style="font-size:24px;color:white;opacity:0.5;"></i> SKPD</a>
       </li>
-        
+      <li>
+        <a href="/aplikasi"><i class="fa fa-cogs" style="font-size:24px;color:white;opacity:0.5;"></i> Daftar Aplikasi</a>
+    </li>
 
 
     </nav>
@@ -149,14 +151,15 @@
             @if ($row->jabatan == 'user')
             <div class="col-md-4">
               <div class="cardadmin" style="text-align:center">
-                <img src="assets_dashboard/img/person.png" alt="Avatar" style="width:100%">
+                <img src="uploads/{{$row->foto}}" alt="Avatar" style="width:200px;height:200px">
                 <div class="containeradmin">
-                  <h4><b>{{$row->name}}</b></h4> 
+                  <h5><b>{{$row->name}}</b></h5> 
                   <p>SKPD</p> 
                   <a href="editadmin/{{$row ->id }}" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
                   <a style="" href="hapusadmin/{{ $row->id }}"type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>            
                 </div>
+                <br>
               </div>
               <br>
         </div>
@@ -170,11 +173,7 @@
   {{ $bio->links() }}
   </div>
 </div>
-            <div class="col-md-8">
-            <!-- Nama : Deny Saweduling  <br>
-            Jabatan: Penikmat wanita tingkat akut  <br>
-            Umur : 21  <br> -->
-            </div>
+
 
 
 

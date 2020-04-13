@@ -83,7 +83,7 @@
         <ul class="list-unstyled components">
 
           
-          <li  >
+          <li>
             <li >
               <a href="/dashboard"><i class="fa fa-home" style="font-size:24px;color:white;opacity:0.5;"></i>
                  Home </a>
@@ -105,7 +105,9 @@
           <li  >
             <a href="/admin"><i class="fa fa-building" style="font-size:24px;color:white;opacity:0.5;"></i> SKPD</a>
         </li>
-          
+        <li >
+          <a href="/aplikasi"><i class="fa fa-cogs" style="font-size:24px;color:white;opacity:0.5;"></i> Daftar Aplikasi</a>
+      </li>
           
               
 

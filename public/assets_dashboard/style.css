@@ -1620,7 +1620,7 @@ html, body {
 }
 
 
-.movie-card {
+.app-card {
   font: 14px/22px "Lato", Arial, sans-serif;
   color: #A9A8A3;
   padding: 40px 0;
@@ -1654,7 +1654,7 @@ html, body {
   top:0; left:0;
   background:	#080928;
   background-image: url("../uploads/manado.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   z-index:-1;
  
   

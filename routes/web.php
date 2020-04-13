@@ -51,6 +51,8 @@ Route::group(['middleware' => ['web', 'auth',]], function() {
   Route::POST('deletePost','PostController@deletePost');
 
 Route::get('/skpd', 'skpdController@skpd');
+Route::get('/aplikasi', 'aplikasiController@aplikasi');
+
 Route::get('/dashboard', 'dashboardController@dashboard')->name('admin')->middleware('adminchecker');
 
 

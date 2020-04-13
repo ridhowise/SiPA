@@ -188,7 +188,7 @@ $currentChecked++;
 ?>
 @if ($percentage == '100')
 <div class="col-sm-12">
-  <div class="movie-card">
+  <div class="app-card">
     <div class="container-card">
       <a href="#"><img style="width:187px" src="uploads/{{ Auth::user()->foto}}" alt="cover" class="cover" /></a>
       <div class="hero">         
@@ -206,7 +206,7 @@ $currentChecked++;
         </div> <!-- end column2 -->
       </div> <!-- end description -->
     </div> <!-- end container -->
-  </div> <!-- end movie-card -->
+  </div> <!-- end card -->
 
 </div>
 @else 

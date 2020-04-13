@@ -3,7 +3,7 @@
 namespace App\Http\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class skpdModel extends Model
+class aplikasiModel extends Model
 {
    protected $table = 'request';
    //disable createdate and updatedate
@@ -13,6 +13,6 @@ class skpdModel extends Model
        return $this->hasMany('App\Http\Models\requirementModel', 'request_id');
    }
 }
-}
+
 
 ?>
