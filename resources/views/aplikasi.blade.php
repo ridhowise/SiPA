@@ -156,7 +156,7 @@ $currentChecked++;
 
     <div class="col-md-3">
         <div class="cardadmin" style="text-align:center">
-          <img src="uploads/logo.png" alt="Avatar" style="width:100%">
+          <img src="assets_dashboard/img/logo2.png" alt="Avatar" style="width:100%">
           <div class="containeradmin">
             <h4><b>{{$row->namaaps}}</b></h4> 
             <h5><b>{{$row->nama}}</b></h5> 
