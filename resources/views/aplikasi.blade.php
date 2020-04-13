@@ -167,7 +167,6 @@ $currentChecked++;
         <br>
   </div>
 
-
 @else 
 <div></div>
 @endif
