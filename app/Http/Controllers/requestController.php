@@ -41,7 +41,7 @@ public function simpanrequest(Request $request)
         if ($upload_success){
             $bio = new requestModel;
             $bio->nama = $request->input('nama');
-            $bio->namaaps = $request->input('namaaps');
+            $bio->aplikasi = $request->input('aplikasi');
             $bio->penjelasan = $request->input('penjelasan');
             $bio->lampiran = $fileName;
             $bio->status = $request->input('status');
@@ -76,14 +76,28 @@ public function ubahrequest(Request $request)
     $id     = $request->input('id');
     $bio     = requestModel::find($id);
      
-    $bio->namaaps = $request->input('namaaps');
+    $bio->aplikasi = $request->input('aplikasi');
     $bio->status = $request->input('status');
     $bio->keterangan = $request->input('keterangan');
+    $bio->countdown = $request->input('countdown');
 
 
 
     $bio->save();
      
+
+      
+     
+    return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
+}
+public function getProgress($id)
+{
+    return view('editprogress', ['request' => requestModel::with("requirements")->findOrFail($id)]);
+}
+ 
+public function ubahprogress(Request $request)
+{
+    
 
        $checkboxs = $request->input('checkbox');
         $ids = $request->input('ids');
@@ -101,6 +115,8 @@ public function ubahrequest(Request $request)
      
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
+
+
 
 public function getDelete($id)
 {

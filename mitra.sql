@@ -50,7 +50,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `request` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
-  `namaaps` varchar(255) DEFAULT NULL,
+  `aplikasi` varchar(255) DEFAULT NULL,
   `penjelasan` text NOT NULL,
   `lampiran` varchar(255) DEFAULT NULL,
   `status` varchar(11) DEFAULT '0',
@@ -63,7 +63,7 @@ CREATE TABLE `request` (
 -- Dumping data untuk tabel `request`
 --
 
-INSERT INTO `request` (`id`, `nama`, `namaaps`, `penjelasan`, `lampiran`, `status`, `keterangan`, `created_at`, `updated_at`) VALUES
+INSERT INTO `request` (`id`, `nama`, `aplikasi`, `penjelasan`, `lampiran`, `status`, `keterangan`, `created_at`, `updated_at`) VALUES
 (61, 'Badan Penanggulangan Bencana Daerah', 'Penanganan bencana', 'penanganan bencana', 'ANDRE TA CEK PLAGIAT.docx', '0', 'tidak layak', '2020-02-22 17:33:20', '2020-03-20 00:41:11'),
 (68, 'Dinas Ketahanan Pangan', 'Aplikasi Pangan', 'Pangan', 'Finish 30 Juli.docx', '1', NULL, '2020-02-22 20:10:22', '2020-02-25 02:52:26'),
 (73, 'Dinas Ketahanan Pangan', 'Aplikasi Pangan 2', 'hahaha', 'Fian Fix Wisuda 2019.docx', '0', 'gak jelas astaga', '2020-02-24 21:14:05', '2020-02-25 02:52:57'),

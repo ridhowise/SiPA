@@ -163,7 +163,7 @@
                 @foreach ($bio as $row)
                   <tr>
                     <!-- {{-- <td>{{ $row->nama }}</td> --}} -->
-                    <td>{{ $row->namaaps }}</td>
+                    <td>{{ $row->aplikasi }}</td>
                     <td>
                       @if ($row->status === '0') 
                       <button type="button" class="btn btn-danger">Ditolak</button>

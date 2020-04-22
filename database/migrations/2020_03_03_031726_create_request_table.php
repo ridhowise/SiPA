@@ -16,7 +16,7 @@ class CreateRequestTable extends Migration
         Schema::create('request', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama')->nullable();
-            $table->string('namaaps');
+            $table->string('aplikasi');
             $table->text('penjelasan');
             $table->string('lampiran');
             $table->string('status')->nullable();

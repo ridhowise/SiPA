@@ -175,7 +175,7 @@
                 @foreach ($bio as $row)
                   <tr>
                     <td>{{ $row->nama }}</td>
-                    <td>{{ $row->namaaps }}</td>
+                    <td>{{ $row->aplikasi }}</td>
                     <td>{{ $row->penjelasan }}</td>
                     <td>
                       <a href="uploads/{{$row->lampiran}}" download="{{$row->lampiran}}">
@@ -214,6 +214,7 @@
                     <td>
                         <div class="btn-group">
                           <a href="../editrequest/{{ $row->id }}" type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                          <a href="../editprogress/{{ $row->id }}" type="button" class="btn btn-success"><span class="glyphicon glyphicon-check" aria-hidden="true"></span></a>
                           <a href="hapusrequesta/{{ $row->id }}"type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                         </div>
                     </td>

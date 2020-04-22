@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Progress</title>
+  <title>Edit </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="assets_dashboard/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6c5569c4137b797e021be6e35fbd28d3036e38ab/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -30,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="assets_dashboard/img/logo.png"></a>
+      <a class="navbar-brand" href="#"><img src="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/img/logo.png"></a>
     </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -84,26 +83,32 @@
         <ul class="list-unstyled components">
 
           
+          <li>
+            <li >
+              <a href="/dashboard"><i class="fa fa-home" style="font-size:24px;color:white;opacity:0.5;"></i>
+                 Home </a>
+              {{-- <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <!-- <li>
+                      <a href="#">apa</a>
+                  </li>
+                  <li>
+                      <a href="#">aja</a>
+                  </li>
+                  <li>
+                      <a href="#">boleh</a>
+                  </li> -->
+              </ul> --}}
+          </li>
+          <li class="active">
+              <a href="/requesta"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Daftar Pengajuan</a>
+          </li>
           <li  >
-            <a href="/skpd"><i class="fa fa-home" style="font-size:24px;color:white;opacity:0.5;"></i>
-               Home </a>
-            {{-- <ul class="collapse list-unstyled" id="homeSubmenu">
-                <!-- <li>
-                    <a href="#">apa</a>
-                </li>
-                <li>
-                    <a href="#">aja</a>
-                </li>
-                <li>
-                    <a href="#">boleh</a>
-                </li> -->
-            </ul> --}}
+            <a href="/admin"><i class="fa fa-building" style="font-size:24px;color:white;opacity:0.5;"></i> SKPD</a>
         </li>
-        <li class="" >
-            <a href="/request"><i class="fa fa-laptop" style="font-size:24px;color:white;opacity:0.5;"></i> Status Aplikasi</a>
-        </li>
-             
-
+        <li >
+          <a href="/aplikasi"><i class="fa fa-cogs" style="font-size:24px;color:white;opacity:0.5;"></i> Daftar Aplikasi</a>
+      </li>
+          
               
 
 
@@ -116,6 +121,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
               <div class="container-fluid">
+                
 
                   <button type="button" id="sidebarCollapse" class="btn btn-default">
                       <i class="fa fa-align-left"></i>
@@ -134,77 +140,45 @@
     </div>
     @endif
     
-        <div class="row">
-           <div class="col-md-12">
-            <div class="container-fluid">
-
-         <div class="centers">
-  @foreach ($bio as $row)
-  <?php 
-    $currentChecked = 0;
-    foreach($row->requirements as $r) {
-      if($r->checkbox == 1) {
-        $currentChecked++;
-      }
-    }
-    $total = count($row->requirements);
-    $percentage = ($currentChecked/$total) * 100;
-  ?>
-      @if($row->status == 1)
-  <div class="card">
-    <div class="additional">
-      <div class="user-card">
-        <div class="percent center">
-          Persentase %
-        </div>             
-      </div>
-      <div class="more-info">
-        <h3 style="color:white">Persyaratan</h3>
-        
-        @foreach ($row->requirements as $requirement)
-        <div class="coords">
-          <div style="font-size:13px">@if($requirement->checkbox == 1)
-                        <label class="contain"><h5>{{ $requirement->syarat }}</h5>
-                        <input type="checkbox" name="checkbox[]" checked onclick="return false" >
-                        <span class="checkmark"></span> </label>
-                      @else
-                        <label class="contain"><h5>{{ $requirement->syarat }}</h5>
-                        <input type="checkbox" name="checkbox[]" onclick="return false" > 
-                        <span class="checkmark"></span> </label>
-                      @endif</div>
-        </div>
-        @endforeach
-       
-      </div>
-    </div>
-    <div class="general">
-      <h2><i class="fa fa-cogs" style="font-size:24px;color:#273c75;"></i> {{$row->aplikasi}}</h2>
-      <h4>Progress bar</h4>
-      @if($percentage > 0)
-       <div class="w3-section w3-grey">
-       <div class="w3-container w3-padding-small w3-indigo w3-center" style="width:{{$percentage}}%">{{$percentage}}%</div>
-       </div>
-      @else
-      <div class="w3-section w3-grey">
-       <div class="w3-container w3-padding-small w3-grey w3-center" style="width:{{$percentage}}%">{{$percentage}}%</div>
-       </div>
-      @endif
-    
-
-    </div>
-  </div>
-  @else
-    <div></div>
-    @endif
-@endforeach
-
-</div>
-              <div>
+              
+              <div class="container-fluid">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Edit <b>{{ $request->aplikasi }}</b></div>
+                  <div class="panel-body">
+                      <form class="form-horizontal" action=""  method="post">
+                          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                          <input type="hidden" name="id" value="{{ $request->id }}">
+          
+                              
+                              
+                              @foreach ($request->requirements as $requirement)
+                              <div class="form-group">
+                                <label class="control-label col-sm-2"></label>
+                                <input type="hidden" name="ids[]" value="{{ $requirement->id }}">
+                                <div class="col-sm-10">
+                                <label class="contain"><h5>{{ $requirement->syarat }}</h5>
+                                @if($requirement->checkbox == 1)
+                                  <input type="checkbox" name="checkbox[]" checked>
+                                @else
+                                  <input type="checkbox" name="checkbox[]">
+                                @endif
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                              </div>
+                              @endforeach
+                              <br>
+                          <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                          </div>
+                      </form>
+                  </div>
+                </div>
             </div>
-            </div>
-        
-    </div>
-</div>
+            
+            
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

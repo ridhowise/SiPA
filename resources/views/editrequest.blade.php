@@ -143,7 +143,7 @@
               
               <div class="container-fluid">
                 <div class="panel panel-default">
-                  <div class="panel-heading">Edit {{ $request->namaaps }}</div>
+                  <div class="panel-heading">Edit {{ $request->aplikasi }}</div>
                   <div class="panel-body">
                       <form class="form-horizontal" action=""  method="post">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -152,7 +152,7 @@
                           <div class="form-group">
                             <label class="control-label col-sm-2">Nama Aplikasi:</label>
                             <div class="col-sm-10">          
-                              <textarea class="form-control" name="namaaps">{{ $request->namaaps }}</textarea>
+                              <textarea class="form-control" name="aplikasi">{{ $request->aplikasi }}</textarea>
                             </div>
                           </div>
                           
@@ -202,23 +202,20 @@
                                   <textarea class="form-control" name="keterangan">{{ $request->keterangan }}</textarea>
                                 </div>
                               </div>
-                              
-                              @foreach ($request->requirements as $requirement)
                               <div class="form-group">
-                                <label class="control-label col-sm-2"></label>
-                                <input type="hidden" name="ids[]" value="{{ $requirement->id }}">
-                                <div class="col-sm-10">
-                                <label class="contain"><h5>{{ $requirement->syarat }}</h5>
-                                @if($requirement->checkbox == 1)
-                                  <input type="checkbox" name="checkbox[]" checked>
-                                @else
-                                  <input type="checkbox" name="checkbox[]">
-                                @endif
-                                  <span class="checkmark"></span>
-                                </label>
+                                <label class="control-label col-sm-2">Deadline (Hari): </label>
+                                <div class="col-sm-10">          
+                                  <input type="text" name="countdown" value="{{ $request->countdown }}"> </div>
                               </div>
-                              </div>
-                              @endforeach
+
+                              {{-- <div class="form-group">
+                                <label class="control-label col-sm-2">Logo:</label>
+                                <div class="col-sm-10">          
+                                  <input type="file" name="logo">
+                                </div>
+                              </div> 
+                           --}}
+                              
                               <br>
                           <div class="form-group">        
                             <div class="col-sm-offset-2 col-sm-10">

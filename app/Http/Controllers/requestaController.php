@@ -40,7 +40,7 @@ public function simpanrequesta(Request $requesta)
         if ($upload_success){
             $bio = new requestaModel;
             $bio->nama = $requesta->input('nama');
-            $bio->namaaps = $requesta->input('namaaps');
+            $bio->aplikasi = $requesta->input('aplikasi');
             $bio->penjelasan = $requesta->input('penjelasan');
             $bio->lampiran = $fileName;
             $bio->status = $requesta->input('status');
@@ -68,7 +68,7 @@ public function ubahrequesta(Request $requesta)
     $bio     = requestaModel::find($id);
      
     $bio->nama = $requesta->input('nama');
-    $bio->namaaps = $requesta->input('namaaps');
+    $bio->aplikasi = $requesta->input('aplikasi');
     $bio->penjelasan = $requesta->input('penjelasan');
     $bio->lampiran = $requesta->input('lampiran');
     $bio->status = $requesta->input('status');
@@ -97,7 +97,7 @@ public function cari(Request $requesta)
             // mengambil data dari table pegawai sesuai pencarian data        
         $bio = requestaModel::with("requirements")
         ->where('nama','LIKE',"%{$cari}%")
-        ->orWhere('namaaps', 'LIKE', "%{$cari}%") 
+        ->orWhere('aplikasi', 'LIKE', "%{$cari}%") 
         ->paginate(5);
  
             // mengirim data pegawai ke view index

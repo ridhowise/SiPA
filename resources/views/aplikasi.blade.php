@@ -158,7 +158,7 @@ $currentChecked++;
         <div class="cardadmin" style="text-align:center">
           <img src="assets_dashboard/img/logo2.png" alt="Avatar" style="width:100%">
           <div class="containeradmin">
-            <h4><b>{{$row->namaaps}}</b></h4> 
+            <h4><b>{{$row->aplikasi}}</b></h4> 
             <h5><b>{{$row->nama}}</b></h5> 
             <a href="{{$row->keterangan}}" type="button" class="btn btn-primary">LINK DEMO</a>
           </div>

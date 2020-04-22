@@ -61,6 +61,9 @@ Route::get('/dashboard', 'dashboardController@dashboard')->name('admin')->middle
   Route::post('/inputrequest', 'requestController@simpanrequest');
   Route::get('/editrequest/{id}', 'requestController@getEdit');
   Route::post('/editrequest/{id}', 'requestController@ubahrequest');
+  Route::get('/editprogress/{id}', 'requestController@getProgress');
+  Route::post('/editprogress/{id}', 'requestController@ubahprogress');
+
 
   Route::get('/hapusrequest/{id}', 'requestController@getDelete');
 

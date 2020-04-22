@@ -193,7 +193,7 @@ $currentChecked++;
       <a href="#"><img style="width:187px" src="uploads/{{ Auth::user()->foto}}" alt="cover" class="cover" /></a>
       <div class="hero">         
         <div class="details">
-          <div class="title1"><i class="fa fa-cogs" style="font-size:40px;color:white;"></i> {{ $row->namaaps }}</div>
+          <div class="title1"><i class="fa fa-cogs" style="font-size:40px;color:white;"></i> {{ $row->aplikasi }}</div>
           <div class="title2">{{ $row->nama }}</div>    
         </div> <!-- end details -->
       </div> <!-- end hero -->

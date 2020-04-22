@@ -140,7 +140,7 @@
                             <div class="form-group">
                               <label class="control-label col-sm-2">Nama Aplikasi:</label>
                               <div class="col-sm-10">          
-                                <textarea class="form-control" name="namaaps"></textarea>
+                                <textarea class="form-control" name="aplikasi"></textarea>
                               </div>
                             </div>
                             <div class="form-group">
