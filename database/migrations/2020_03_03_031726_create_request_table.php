@@ -21,7 +21,12 @@ class CreateRequestTable extends Migration
             $table->string('lampiran');
             $table->string('status')->nullable();
             $table->string('keterangan')->nullable();
+            $table->string('link')->nullable();
+            $table->string('countdown')->nullable();
+            $table->string('maintenance')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
+
         });
     }
 
