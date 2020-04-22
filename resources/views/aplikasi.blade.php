@@ -171,7 +171,7 @@ $currentChecked++;
 <div></div>
 @endif
 @endforeach
-
+</div>
 <div style="text-align:center">
   {{ $bio->links() }}
   </div>
