@@ -535,19 +535,7 @@ position: relative;
         font-family:verdana;
         cursor:pointer;
         color:#868383;}
-        select{top:375px;
-        left:680px;
-        padding:10px;
-        position:absolute;
-        width:110px;
-        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
-        height:40px;
-        font-size:16px;
-        font-family:verdana;
-        border:none;
-        color:#868383;
-        cursor:pointer;
-        }
+        
         .box11:hover{background:#e9f0f2;
         }
         .box12:hover,.box12:active{background:#e9f0f2;
@@ -556,7 +544,7 @@ position: relative;
         }
         .box14:hover{background:#e9f0f2;
         }
-        select:hover{background:#e9f0f2;
+        selecto:hover{background:#e9f0f2;
         }
         .profile-user-img {
           margin: 0 auto;

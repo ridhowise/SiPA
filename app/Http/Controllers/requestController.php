@@ -79,7 +79,10 @@ public function ubahrequest(Request $request)
     $bio->aplikasi = $request->input('aplikasi');
     $bio->status = $request->input('status');
     $bio->keterangan = $request->input('keterangan');
-    $bio->countdown = $request->input('countdown');
+    $bio->bulan = $request->input('bulan');
+    $bio->tanggal = $request->input('tanggal');
+    $bio->tahun = $request->input('tahun');
+
 
 
 

@@ -160,7 +160,8 @@ $currentChecked++;
           <div class="containeradmin">
             <h4><b>{{$row->aplikasi}}</b></h4> 
             <h5><b>{{$row->nama}}</b></h5> 
-            <a href="{{$row->keterangan}}" type="button" class="btn btn-primary">LINK DEMO</a>
+            <a href="/editaplikasi/{{ $row->id }}" type="button" class="btn btn-primary"><i class= "fa fa-pencil" ></i></a>
+            <a href="{{$row->link}}" type="button" class="btn btn-primary">LINK DEMO</a>
           </div>
           <br>
         </div>
