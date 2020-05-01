@@ -152,7 +152,7 @@
                           <div class="form-group">
                             <label class="control-label col-sm-2">Nama Aplikasi:</label>
                             <div class="col-sm-10">          
-                              <textarea class="form-control" name="aplikasi">{{ $request->aplikasi }}</textarea>
+                              <textarea class="form-control" name="aplikasi" readonly>{{ $request->aplikasi }}</textarea>
                             </div>
                           </div>
                           

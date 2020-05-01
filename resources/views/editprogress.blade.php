@@ -150,8 +150,9 @@
                           <input type="hidden" name="id" value="{{ $request->id }}">
           
                               
-                              
+                               
                               @foreach ($request->requirements as $requirement)
+
                               <div class="form-group">
                                 <label class="control-label col-sm-2"></label>
                                 <input type="hidden" name="ids[]" value="{{ $requirement->id }}">

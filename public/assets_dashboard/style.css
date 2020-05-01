@@ -1115,7 +1115,7 @@ position: relative;
 .bg-green-active,
 .modal-success .modal-header,
 .modal-success .modal-footer {
-  background-color: #008d4c !important;
+  background-color: #fff !important;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Abel');
