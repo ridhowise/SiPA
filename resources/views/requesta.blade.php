@@ -214,7 +214,11 @@
                     <td>
                         <div class="btn-group">
                           <a href="../editrequest/{{ $row->id }}" type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                          @if($row->status === '1')
                           <a href="../editprogress/{{ $row->id }}" type="button" class="btn btn-success"><span class="glyphicon glyphicon-check" aria-hidden="true"></span></a>
+                          @else 
+                          
+                          @endif
                           <a href="hapusrequesta/{{ $row->id }}"type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                         </div>
                     </td>
