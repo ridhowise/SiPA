@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6c5569c4137b797e021be6e35fbd28d3036e38ab/public/assets_dashboard/style.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/b83733bfef6cd3ece739923953f83058150939cb/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -148,9 +148,23 @@
                       <form class="form-horizontal" action=""  method="post">
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           <input type="hidden" name="id" value="{{ $request->id }}">
-          
-                              
-                               
+                          
+                          <div class="form-group">
+                            <label class="control-label col-sm-2"></label>
+                            <div class="col-sm-10">
+                              <div id="clockdiv">
+                                <div><span id="day"></span><div class="smalltext">Hari</div></div>
+                                <div><span id="hour"></span><div class="smalltext">Jam</div></div>
+                                <div><span id="minute"></span><div class="smalltext">Menit</div></div>
+                                <div><span id="second"></span><div class="smalltext">Detik</div></div>
+                              </div>
+                            </div>
+                          </div>
+                            
+                     
+                          
+                        
+            
                               @foreach ($request->requirements as $requirement)
 
                               <div class="form-group">
@@ -169,6 +183,7 @@
                               </div>
                               @endforeach
                               <br>
+                              
 
                               
                           <div class="form-group">        
@@ -193,6 +208,38 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active');
     });
 });
+
+      // Set the date we're counting down to
+      var countDownDate = new Date("{{$request->countdown}} 00:00:00").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="countdown"
+        document.getElementById("day").innerHTML = days ;
+        document.getElementById("hour").innerHTML = hours ;
+        document.getElementById("minute").innerHTML = minutes ;
+        document.getElementById("second").innerHTML = seconds ;
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("clockdiv").style.display = "none";
+        }
+      }, 1);
+
 </script>
 
 </html>

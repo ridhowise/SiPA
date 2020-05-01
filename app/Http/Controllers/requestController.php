@@ -46,6 +46,8 @@ public function simpanrequest(Request $request)
             $bio->lampiran = $fileName;
             $bio->status = $request->input('status');
             $bio->keterangan = $request->input('keterangan');
+            $bio->countdown = $request->input('countdown');
+
 
  
             $bio->save();
@@ -79,7 +81,6 @@ public function ubahrequest(Request $request)
     $bio->aplikasi = $request->input('aplikasi');
     $bio->status = $request->input('status');
     $bio->keterangan = $request->input('keterangan');
-    $bio->countdown = $request->input('countdown');
 
 
 

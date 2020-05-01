@@ -134,7 +134,7 @@
     @endif
     <div class="panel panel-default">
         <div class="panel-heading">List Data &nbsp;
-        <a href="inputrequest" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a>
+        <a href="inputrequest" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Input Aplikasi</a>
         </div>
         <div class="panel-body">
         <div class="row">

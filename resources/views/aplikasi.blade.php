@@ -175,7 +175,20 @@ $currentChecked++;
   </div>
 
 @else 
-<div></div>
+<div class="col-md-3">
+  <div class="cardadmin" style="text-align:center;opacity:0.5">
+    <img src="assets_dashboard/img/logo2.png" alt="Avatar" style="width:100%">
+    <div class="containeradmin">
+      <h4><b>{{$row->aplikasi}}</b></h4> 
+      <h5><b>{{$row->nama}}</b></h5> 
+      <a href="#" type="button" class="btn btn-primary">Belum Selesai</a>
+      
+
+    </div>
+    <br>
+  </div>
+  <br>
+</div>
 @endif
 @endforeach
 </div>

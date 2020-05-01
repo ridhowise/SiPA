@@ -249,12 +249,9 @@ $(document).ready(function () {
         // If the count down is over, write some text 
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("day").innerHTML = "0";
-          document.getElementById("hour").innerHTML = "0";
-          document.getElementById("minute").innerHTML = "0";
-          document.getElementById("second").innerHTML = "0";
+          document.getElementById("clockdiv").style.display="none";
         }
-      }, 1000);
+      }, 1);
     
 </script>
 
