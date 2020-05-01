@@ -79,10 +79,7 @@ public function ubahrequest(Request $request)
     $bio->aplikasi = $request->input('aplikasi');
     $bio->status = $request->input('status');
     $bio->keterangan = $request->input('keterangan');
-    $bio->bulan = $request->input('bulan');
-    $bio->tanggal = $request->input('tanggal');
-    $bio->tahun = $request->input('tahun');
-
+    $bio->countdown = $request->input('countdown');
 
 
 
@@ -93,6 +90,12 @@ public function ubahrequest(Request $request)
      
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
+
+public function proses($id)
+{
+    return view('proses', ['request' => requestModel::with("requirements")->findOrFail($id)]);
+}
+
 public function getProgress($id)
 {
     return view('editprogress', ['request' => requestModel::with("requirements")->findOrFail($id)]);
@@ -118,6 +121,8 @@ public function ubahprogress(Request $request)
      
     return redirect()->action('requestaController@requesta')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');
 }
+
+
 
 
 

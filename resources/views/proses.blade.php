@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="assets_dashboard/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6c5569c4137b797e021be6e35fbd28d3036e38ab/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -30,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="assets_dashboard/img/logo.png"></a>
+      <a class="navbar-brand" href="#"><img src="https://rawcdn.githack.com/ridhowise/SiPA/6784f72a4be2f11859329ec81de5d49609acbfde/public/assets_dashboard/img/logo.png"></a>
     </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
@@ -134,23 +134,22 @@
     </div>
     @endif
     
-        <div class="row">
+        <div class="request">
            <div class="col-md-12">
             <div class="container-fluid">
 
          <div class="centers">
-  @foreach ($bio as $row)
-  <?php 
-    $currentChecked = 0;
-    foreach($row->requirements as $r) {
-      if($r->checkbox == 1) {
-        $currentChecked++;
-      }
-    }
-    $total = count($row->requirements);
-    $percentage = ($currentChecked/$total) * 100;
-  ?>
-      @if($row->status == 1)
+        <?php 
+            $currentChecked = 0;
+            foreach($request->requirements as $r) {
+              if($r->checkbox == 1) {
+                $currentChecked++;
+              }
+            }
+            $total = count($request->requirements);
+            $percentage = ($currentChecked/$total) * 100;
+        ?>
+      @if($request->status == 1)
   <div class="card">
     <div class="additional">
       <div class="user-card">
@@ -161,7 +160,7 @@
       <div class="more-info">
         <h3 style="color:white">Persyaratan</h3>
         
-        @foreach ($row->requirements as $requirement)
+        @foreach ($request->requirements as $requirement)
         <div class="coords">
           <div style="font-size:13px">@if($requirement->checkbox == 1)
                         <label class="contain"><h5>{{ $requirement->syarat }}</h5>
@@ -178,7 +177,7 @@
       </div>
     </div>
     <div class="general">
-      <h2><i class="fa fa-cogs" style="font-size:24px;color:#273c75;"></i> {{$row->aplikasi}}</h2>
+      <h2><i class="fa fa-cogs" style="font-size:24px;color:#273c75;"></i> {{$request->aplikasi}}</h2>
       <h4>Progress bar</h4>
       @if($percentage > 0)
        <div class="w3-section w3-grey">
@@ -190,17 +189,18 @@
        </div>
       @endif
       
-
     </div>
-  
-  
-  
-  
-</div>
+  </div>
+  <div id="clockdiv">
+    <div><span id="day"></span><div class="smalltext">Days</div></div>
+    <div><span id="hour"></span><div class="smalltext">Hours</div></div>
+    <div><span id="minute"></span><div class="smalltext">Minutes</div></div>
+    <div><span id="second"></span><div class="smalltext">Seconds</div></div>
+  </div>
+
   @else
     <div></div>
     @endif
-@endforeach
 
 </div>
               <div>
@@ -219,7 +219,38 @@ $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
-});
+})
+      // Set the date we're counting down to
+      var countDownDate = new Date("{{$request->countdown}} 00:00:00").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="countdown"
+        document.getElementById("day").innerHTML = days + "d ";
+        document.getElementById("hour").innerHTML = hours + "h ";
+        document.getElementById("minute").innerHTML = minutes + "m ";
+        document.getElementById("second").innerHTML = seconds + "s ";
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "LEWAT BATAS WAKTU";
+        }
+      }, 1000);
+    
 </script>
 
 </html>

@@ -162,6 +162,12 @@ $currentChecked++;
             <h5><b>{{$row->nama}}</b></h5> 
             <a href="/editaplikasi/{{ $row->id }}" type="button" class="btn btn-primary"><i class= "fa fa-pencil" ></i></a>
             <a href="{{$row->link}}" type="button" class="btn btn-primary">LINK DEMO</a>
+            @if ($row->maintenance == '0')
+            <a href="" type="button" class="btn btn-success">ACTIVE</a>
+            @else 
+            <a href="" type="button" class="btn btn-danger">MAINTENANCE</a>
+            @endif
+
           </div>
           <br>
         </div>

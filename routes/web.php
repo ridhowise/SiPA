@@ -66,6 +66,8 @@ Route::get('/dashboard', 'dashboardController@dashboard')->name('admin')->middle
   Route::post('/editrequest/{id}', 'requestController@ubahrequest');
   Route::get('/editprogress/{id}', 'requestController@getProgress');
   Route::post('/editprogress/{id}', 'requestController@ubahprogress');
+  Route::get('/proses/{id}', 'requestController@proses');
+
 
 
   Route::get('/hapusrequest/{id}', 'requestController@getDelete');

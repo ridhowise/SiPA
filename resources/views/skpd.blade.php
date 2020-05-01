@@ -194,15 +194,25 @@ $currentChecked++;
       <div class="hero">         
         <div class="details">
           <div class="title1"><i class="fa fa-cogs" style="font-size:40px;color:white;"></i> {{ $row->aplikasi }}</div>
-          <div class="title2">{{ $row->nama }}</div>    
+          <div class="title2">{{ $row->nama }}</div> 
+            
+          
         </div> <!-- end details -->
       </div> <!-- end hero -->
       <div class="description">
         <div class="column1">
-          <a href="{{$row->keterangan}}" type="button" class="btn btn-primary btn-lg btn-block">LINK DEMO</a>
+          <a href="{{$row->link}}" type="button" class="btn btn-primary btn-lg btn-block">LINK DEMO</a>
+          
         </div> <!-- end column1 -->
         <div class="column2">
-          <p>{{ $row->penjelasan }}</p>
+          @if ($row->maintenance == '0')
+            <a href="" type="button" class="btn btn-success">ACTIVE</a>
+            @else 
+            <a href="" type="button" class="btn btn-danger">MAINTENANCE</a>
+            @endif 
+          <br><br>
+         <p>{{ $row->penjelasan }}</p>
+
         </div> <!-- end column2 -->
       </div> <!-- end description -->
     </div> <!-- end container -->

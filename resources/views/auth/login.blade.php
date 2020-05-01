@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row" style="margin-top:23vh">
         
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-8 col-md-offset-2">
 
             <div class="panel panel-default" style="height:0vh;width:auto;opacity: 1;">
                 <div class="panel-heading" style="text-align: center;background-color:#337ab7;color:#fff">   
@@ -19,18 +19,18 @@
                         left: calc(50% - 50px);">
                            
                     <img class="card-img-top" src="{{asset('assets_home/img/logo.png')}}" class="img-responsive" style="width:7%;opacity:0"/>
-                    <h3> SMPA</h3>
-                    <h5 style="opacity:0.8">Sistem Manajemen Pengembangan Aplikasi</h5>
+                    <h2> SMPA</h2>
+                    <h4 style="opacity:0.8">Sistem Manajemen Pengembangan Aplikasi</h4>
                     {{-- <h5> Pemeritah Kabupaten Minahasa Tenggara </h5> --}}
-                </div>                <div class="panel-body" style="margin-top: 3%; margin-bottom: 3%">
+                </div>                <div class="panel-body" style="margin-top: 5%; margin-bottom: 5%">
                     
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-3 control-label"></label>
+                            <label for="email" class="col-md-6 control-label"></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input style="border:solid 2px #c0c0c0"placeholder="username" id="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -41,10 +41,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-3 control-label"></label>
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" style="margin-bottom:5%;">
+                            <label for="password" class="col-md-6 control-label"></label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <input style="border:solid 2px #c0c0c0"placeholder="password" id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))

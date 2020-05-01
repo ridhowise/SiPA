@@ -22,9 +22,7 @@ class CreateRequestTable extends Migration
             $table->string('status')->nullable();
             $table->string('keterangan')->nullable();
             $table->string('link')->nullable();
-            $table->string('bulan')->nullable();
-            $table->string('tanggal')->nullable();
-            $table->string('tahun')->nullable();
+            $table->string('countdown')->nullable();
             $table->string('maintenance')->nullable();
             $table->string('logo')->nullable();
             $table->timestamps();

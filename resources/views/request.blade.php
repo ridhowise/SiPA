@@ -188,7 +188,7 @@
                     <td>  
                     @if ($row->status === '1') 
                     <div class="btn-group">
-                      <a href="progress" type="button" class="btn btn-default">Lihat Progress</a>
+                      <a href="proses/{{ $row->id }}" type="button" class="btn btn-default">Lihat Progress</a>
                     </div>
                     @elseif ($row->status === '0') 
                     {{ $row->keterangan }}
