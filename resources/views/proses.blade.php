@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/6c5569c4137b797e021be6e35fbd28d3036e38ab/public/assets_dashboard/style.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/ridhowise/SiPA/9744ce8337edd87cf4806fa1300c63c3435b207a/public/assets_dashboard/style.css">
 
     <!-- Font Awesome JS -->
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script> -->
@@ -126,7 +126,7 @@
 
 
 <br>
-<div class="container">
+<div class="container-fluid">
     @if(Session::has('alert'))
     <div class="alert alert-{{Session::get('style')}} alert-dismissable fade in">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>    
@@ -191,12 +191,14 @@
       
     </div>
   </div>
+  <div class="col-md-12">
   <div id="clockdiv">
-    <div><span id="day"></span><div class="smalltext">Days</div></div>
-    <div><span id="hour"></span><div class="smalltext">Hours</div></div>
-    <div><span id="minute"></span><div class="smalltext">Minutes</div></div>
-    <div><span id="second"></span><div class="smalltext">Seconds</div></div>
+    <div><span id="day"></span><div class="smalltext">Hari</div></div>
+    <div><span id="hour"></span><div class="smalltext">Jam</div></div>
+    <div><span id="minute"></span><div class="smalltext">Menit</div></div>
+    <div><span id="second"></span><div class="smalltext">Detik</div></div>
   </div>
+</div>
 
   @else
     <div></div>
@@ -239,10 +241,10 @@ $(document).ready(function () {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
           
         // Output the result in an element with id="countdown"
-        document.getElementById("day").innerHTML = days + "d ";
-        document.getElementById("hour").innerHTML = hours + "h ";
-        document.getElementById("minute").innerHTML = minutes + "m ";
-        document.getElementById("second").innerHTML = seconds + "s ";
+        document.getElementById("day").innerHTML = days ;
+        document.getElementById("hour").innerHTML = hours ;
+        document.getElementById("minute").innerHTML = minutes ;
+        document.getElementById("second").innerHTML = seconds ;
           
         // If the count down is over, write some text 
         if (distance < 0) {
