@@ -1739,7 +1739,7 @@ html, body {
 #clockdiv div > span{
 	padding: 15px;
 	border-radius: 3px;
-	background: #192a56;
+	background: #000;
 	display: inline-block;
 }
 
