@@ -174,7 +174,7 @@ $currentChecked++;
         <br>
   </div>
 
-@else 
+@else
 <div class="col-md-3">
   <div class="cardadmin" style="text-align:center;opacity:0.5">
     <img src="assets_dashboard/img/logo2.png" alt="Avatar" style="width:100%">

@@ -13,7 +13,8 @@ class adminController extends BaseController
 {
     public function admin()
     {
-        $bio = AdminModel::paginate(6);
+        $bio = AdminModel::where('jabatan', 'user')->paginate(6);
+
         // $bio = adminModel::get();
         return view('admin', ['bio' => $bio]);
     }

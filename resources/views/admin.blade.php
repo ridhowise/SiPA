@@ -148,7 +148,6 @@
             <div class="container-fluid">
 
             @foreach($bio as $row)
-            @if ($row->jabatan == 'user')
             <div class="col-md-4">
               <div class="cardadmin" style="text-align:center">
                 <img src="uploads/{{$row->foto}}" alt="Avatar" style="width:200px;height:200px">
@@ -163,9 +162,6 @@
               </div>
               <br>
         </div>
-        @else 
-        <div></div>
-        @endif
   @endforeach
   
   <div class="col-md-12"

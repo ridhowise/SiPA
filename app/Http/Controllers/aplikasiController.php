@@ -15,7 +15,7 @@ class aplikasiController extends BaseController
 {
     public function aplikasi()
     {
-        $bio = aplikasiModel::with("requirements")->paginate(8);
+        $bio = aplikasiModel::with("requirements")->where('status', '1')->paginate(8);
         $reqq = requirementModel::get();
 
         // $bio = requestModel::get();
