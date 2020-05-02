@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
  
 use App\Http\Models\requestModel;
 use App\Http\Models\requirementModel;
+use App\Http\Models\AdminModel;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -47,7 +48,7 @@ public function simpanrequest(Request $request)
             $bio->status = $request->input('status');
             $bio->keterangan = $request->input('keterangan');
             $bio->countdown = $request->input('countdown');
-
+            $bio->users_id = Auth::user()->id;
 
  
             $bio->save();

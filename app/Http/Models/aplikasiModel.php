@@ -12,6 +12,10 @@ class aplikasiModel extends Model
    {
        return $this->hasMany('App\Http\Models\requirementModel', 'request_id');
    }
+   public function users()
+    {
+      return $this->belongsTo('App\Http\Models\AdminModel');
+    }
 }
 
 

@@ -191,6 +191,7 @@
       
     </div>
   </div>
+  @if($percentage < 100)
   <div class="col-md-12">
   <div id="clockdiv">
     <div><span id="day"></span><div class="smalltext">Hari</div></div>
@@ -199,6 +200,9 @@
     <div><span id="second"></span><div class="smalltext">Detik</div></div>
   </div>
 </div>
+@else
+<div></div>
+@endif
 
   @else
     <div></div>
@@ -249,7 +253,10 @@ $(document).ready(function () {
         // If the count down is over, write some text 
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("clockdiv").style.display="none";
+          document.getElementById("day").innerHTML = "0" ;
+          document.getElementById("hour").innerHTML = "0" ;
+          document.getElementById("minute").innerHTML = "0" ;
+          document.getElementById("second").innerHTML = "0" ;
         }
       }, 1);
     

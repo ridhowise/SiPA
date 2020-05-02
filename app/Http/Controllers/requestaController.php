@@ -72,9 +72,11 @@ public function ubahrequesta(Request $requesta)
     $bio->penjelasan = $requesta->input('penjelasan');
     $bio->lampiran = $requesta->input('lampiran');
     $bio->status = $requesta->input('status');
+    $bio->countdown = $requesta->input('countdown');
 
 
     $bio->save();
+
 
      
     return redirect()->action('requestController@request')->with('style', 'success')->with('alert', 'Berhasil Diubah ! ')->with('msg', 'Data Diubah Di Database');

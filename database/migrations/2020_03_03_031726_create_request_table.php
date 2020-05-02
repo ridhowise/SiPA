@@ -15,7 +15,7 @@ class CreateRequestTable extends Migration
     {
         Schema::create('request', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama')->nullable();
+            $table->string('nama');
             $table->string('aplikasi');
             $table->text('penjelasan');
             $table->string('lampiran');
@@ -25,8 +25,12 @@ class CreateRequestTable extends Migration
             $table->string('countdown')->nullable();
             $table->string('maintenance')->nullable();
             $table->string('logo')->nullable();
+            $table->integer('users_id')->unsigned();
             $table->timestamps();
 
+        });
+        Schema::table('request', function (Blueprint $table){
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

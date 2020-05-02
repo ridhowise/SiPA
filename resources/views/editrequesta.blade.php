@@ -43,7 +43,12 @@
                         <textarea class="form-control" name="lampiran">{{ $requesta->lampiran }}</textarea>
                       </div>
                     </div>
-                      
+                    <div class="form-group">
+                      <label class="control-label col-sm-2">Deadline: </label>
+                      <div class="col-sm-10">          
+                      <input type="date" name="countdown">
+                      </div>
+                      </div>
                     @foreach ($requesta->requirements as $requirement)
                     <div class="form-group">
                       <label class="control-label col-sm-2">Syarat: </label>
@@ -54,7 +59,7 @@
                     </div>
                     @endforeach
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                       <label class="control-label col-sm-2">Syarat:</label>
                        <div class="col-sm-10">          
                       <table class="col-sm-10" id="dynamic_field">  
@@ -64,7 +69,7 @@
                           </tr> 
                       </table>
                     </div>
-                    </div> 
+                    </div>  --}}
 
 
                 <!-- <div class="form-group">
