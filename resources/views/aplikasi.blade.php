@@ -154,9 +154,9 @@ $currentChecked++;
 ?>
 @if ($percentage == '100')
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="cardadmin" style="text-align:center">
-          <img src="uploads/{{$row->users->foto}}" alt="Avatar" style="width:100%">
+          <img src="uploads/{{$row->users->foto}}" alt="Avatar"  style="width:200px;height:200px">
           <div class="containeradmin">
             <h4><b>{{$row->aplikasi}}</b></h4> 
             <h5><b>{{$row->nama}}</b></h5> 
@@ -175,9 +175,9 @@ $currentChecked++;
   </div>
 
 @else
-<div class="col-md-3">
+<div class="col-md-4">
   <div class="cardadmin" style="text-align:center;opacity:0.5">
-    <img src="uploads/{{$row->users->foto}}" alt="Avatar" style="width:100%">
+    <img src="uploads/{{$row->users->foto}}" alt="Avatar"  style="width:200px;height:200px">
     <div class="containeradmin">
       <h4><b>{{$row->aplikasi}}</b></h4> 
       <h5><b>{{$row->nama}}</b></h5> 
