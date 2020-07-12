@@ -176,7 +176,7 @@ $currentChecked++;
 
 @else
 <div class="col-md-4">
-  <div class="cardadmin" style="text-align:center;opacity:0.5">
+  <div class="cardadmin" style="text-align:center;">
     <img src="uploads/{{$row->users->foto}}" alt="Avatar"  style="width:200px;height:200px">
     <div class="containeradmin">
       <h4><b>{{$row->aplikasi}}</b></h4> 
